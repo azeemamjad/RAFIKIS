@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
 import { useState } from "react";
 import hero from "@/assets/hero.jpg";
 import story from "@/assets/story.jpg";
@@ -102,13 +103,21 @@ function Index() {
           </ul>
           <a
             href="#top"
-            className="text-left text-[var(--color-bone)] md:text-center md:justify-self-center"
+            className="absolute left-1/2 flex -translate-x-1/2 flex-col items-center text-center text-[var(--color-bone)] md:static md:translate-x-0 md:justify-self-center"
           >
-            <span className="font-display text-2xl md:text-3xl tracking-[0.12em] block leading-none">RAFIKIS</span>
-            <span className="font-heading text-[9px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mt-1 block">Dubai</span>
+            <span className="font-display text-2xl leading-none tracking-[0.12em] md:text-3xl">RAFIKIS</span>
+            <span className="mt-1 pr-[0.4em] font-heading text-[9px] uppercase tracking-[0.4em] text-[var(--color-bone)]/60">Dubai</span>
           </a>
           <div className="ml-auto flex shrink-0 justify-end md:ml-0 md:justify-self-end">
-            <a href="https://instagram.com/rafikisdubai" target="_blank" rel="noopener noreferrer" className="font-heading text-[11px] tracking-[0.25em] uppercase text-[var(--color-bone)]/80 hover:text-[var(--color-bone)] transition">@Rafikisdubai</a>
+            <a
+              href="https://instagram.com/rafikisdubai"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Rafikis on Instagram"
+              className="text-[var(--color-bone)]/80 transition hover:text-[var(--color-bone)]"
+            >
+              <Instagram className="h-5 w-5" strokeWidth={1.5} />
+            </a>
           </div>
         </nav>
       </header>
@@ -131,8 +140,8 @@ function Index() {
       </section>
 
       {/* STORY */}
-      <section id="story" className="py-28 md:py-40 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <section id="story" className="px-6 pt-0 pb-12 md:px-10 md:py-40">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-24 items-center">
           <div className="order-2 md:order-1">
             <p className="font-heading text-[10px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mb-6">Our Story</p>
             <h2 className="font-display text-5xl md:text-7xl leading-none tracking-[0.04em] text-[var(--color-bone)] mb-10">
