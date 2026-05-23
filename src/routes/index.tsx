@@ -42,7 +42,7 @@ const MENU: Section[] = [
   {
     title: "Sauces",
     items: [
-      { name: "Chooza Sauce", price: "_", desc: "The house-special fiery chili sauce. Full bottle." },
+      { name: "Chooza Sauce", price: "—", desc: "The house-special fiery chili sauce. Full bottle." },
       { name: "Ambli", price: "—", desc: "A tangy and sweet tamarind-based chutney." },
       { name: "Coconut Chutney", price: "—", desc: "A creamy, tropical sauce made with fresh grated coconut and subtle green chilies." },
       { name: "Raita", price: "—", desc: "A cooling yogurt-based dip blended with cucumber and light spices." },
@@ -63,6 +63,30 @@ function Wordmark({ className = "" }: { className?: string }) {
   );
 }
 
+function MenuTab({
+  title,
+  isActive,
+  onSelect,
+}: {
+  title: string;
+  isActive: boolean;
+  onSelect: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      className={`font-display text-xl md:text-2xl tracking-[0.18em] uppercase pb-5 -mb-px border-b-2 transition ${
+        isActive
+          ? "text-[var(--color-bone)] border-[var(--color-bone)]"
+          : "text-[var(--color-bone)]/40 border-transparent hover:text-[var(--color-bone)]/70"
+      }`}
+    >
+      {title}
+    </button>
+  );
+}
+
 function Index() {
   const [activeTab, setActiveTab] = useState(MENU[0].title);
   const active = MENU.find((s) => s.title === activeTab) ?? MENU[0];
@@ -78,28 +102,29 @@ function Index() {
           </ul>
           <a
             href="#top"
-            className="absolute left-1/2 -translate-x-1/2 text-center text-[var(--color-bone)] md:static md:translate-x-0 md:justify-self-center"
+            className="text-left text-[var(--color-bone)] md:text-center md:justify-self-center"
           >
             <span className="font-display text-2xl md:text-3xl tracking-[0.12em] block leading-none">RAFIKIS</span>
             <span className="font-heading text-[9px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mt-1 block">Dubai</span>
           </a>
-          <div className="ml-auto flex justify-end md:ml-0 md:justify-self-end">
+          <div className="ml-auto flex shrink-0 justify-end md:ml-0 md:justify-self-end">
             <a href="https://instagram.com/rafikisdubai" target="_blank" rel="noopener noreferrer" className="font-heading text-[11px] tracking-[0.25em] uppercase text-[var(--color-bone)]/80 hover:text-[var(--color-bone)] transition">@Rafikisdubai</a>
           </div>
         </nav>
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex items-end overflow-hidden">
+      <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <img
           src={hero}
           alt="Mishkaki skewers grilling over open flame"
           width={1600}
           height={1800}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover brightness-[0.55]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/40 via-transparent to-[var(--color-ink)]" />
-        <div className="relative z-10 w-full text-center px-6 pb-24 md:pb-32">
+        <div className="absolute inset-0 bg-[var(--color-ink)]/35" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/70 via-[var(--color-ink)]/25 to-[var(--color-ink)]/90" />
+        <div className="relative z-10 w-full text-center px-6 -mt-8 md:-mt-12">
           <h1 className="font-display text-[20vw] md:text-[14rem] leading-[0.85] tracking-[0.04em] text-[var(--color-bone)]">RAFIKIS</h1>
           <p className="font-heading text-[10px] md:text-xs tracking-[0.5em] uppercase mt-4 text-[var(--color-bone)]/80">Dubai's East African Grill House</p>
         </div>
@@ -141,23 +166,37 @@ function Index() {
 
           {/* Tabs */}
           <div className="border-b border-[var(--color-bone)]/20 mb-16 md:mb-20">
-            <div className="flex flex-wrap justify-center gap-x-10 md:gap-x-16 gap-y-4">
-              {MENU.map((section) => {
-                const isActive = section.title === activeTab;
-                return (
-                  <button
+            <div className="flex flex-col items-center gap-y-4 md:hidden">
+              <div className="flex w-full justify-center gap-x-6 sm:gap-x-10">
+                {MENU.slice(0, 3).map((section) => (
+                  <MenuTab
                     key={section.title}
-                    onClick={() => setActiveTab(section.title)}
-                    className={`font-display text-xl md:text-2xl tracking-[0.18em] uppercase pb-5 -mb-px border-b-2 transition ${
-                      isActive
-                        ? "text-[var(--color-bone)] border-[var(--color-bone)]"
-                        : "text-[var(--color-bone)]/40 border-transparent hover:text-[var(--color-bone)]/70"
-                    }`}
-                  >
-                    {section.title}
-                  </button>
-                );
-              })}
+                    title={section.title}
+                    isActive={section.title === activeTab}
+                    onSelect={() => setActiveTab(section.title)}
+                  />
+                ))}
+              </div>
+              <div className="flex w-full justify-center gap-x-6 sm:gap-x-10">
+                {MENU.slice(3).map((section) => (
+                  <MenuTab
+                    key={section.title}
+                    title={section.title}
+                    isActive={section.title === activeTab}
+                    onSelect={() => setActiveTab(section.title)}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="hidden md:flex flex-wrap justify-center gap-x-16 gap-y-4">
+              {MENU.map((section) => (
+                <MenuTab
+                  key={section.title}
+                  title={section.title}
+                  isActive={section.title === activeTab}
+                  onSelect={() => setActiveTab(section.title)}
+                />
+              ))}
             </div>
           </div>
 
