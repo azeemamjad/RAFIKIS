@@ -42,7 +42,7 @@ const MENU: Section[] = [
   {
     title: "Sauces",
     items: [
-      { name: "Chooza Sauce", price: "", desc: "The house-special fiery chili sauce. Full bottle." },
+      { name: "Chooza Sauce", price: "_", desc: "The house-special fiery chili sauce. Full bottle." },
       { name: "Ambli", price: "—", desc: "A tangy and sweet tamarind-based chutney." },
       { name: "Coconut Chutney", price: "—", desc: "A creamy, tropical sauce made with fresh grated coconut and subtle green chilies." },
       { name: "Raita", price: "—", desc: "A cooling yogurt-based dip blended with cucumber and light spices." },
