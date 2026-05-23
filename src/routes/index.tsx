@@ -42,7 +42,7 @@ const MENU: Section[] = [
   {
     title: "Sauces",
     items: [
-      { name: "Chooza Sauce", price: "30", desc: "The house-special fiery chili sauce. Full bottle." },
+      { name: "Chooza Sauce", price: "_", desc: "The house-special fiery chili sauce. Full bottle." },
       { name: "Ambli", price: "—", desc: "A tangy and sweet tamarind-based chutney." },
       { name: "Coconut Chutney", price: "—", desc: "A creamy, tropical sauce made with fresh grated coconut and subtle green chilies." },
       { name: "Raita", price: "—", desc: "A cooling yogurt-based dip blended with cucumber and light spices." },
@@ -70,17 +70,20 @@ function Index() {
     <div className="min-h-screen bg-[var(--color-ink)] text-[var(--color-bone)] font-body">
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 bg-[var(--color-ink)]/95 backdrop-blur-md border-b border-[var(--color-bone)]/10">
-        <nav className="max-w-7xl mx-auto px-6 md:px-10 h-20 grid grid-cols-3 items-center">
+        <nav className="relative max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center md:grid md:grid-cols-3">
           <ul className="hidden md:flex items-center gap-10 font-heading text-[11px] tracking-[0.25em] uppercase text-[var(--color-bone)]/80">
             <li><a href="#story" className="hover:text-[var(--color-bone)] transition">Story</a></li>
             <li><a href="#menu" className="hover:text-[var(--color-bone)] transition">Menu</a></li>
             <li><a href="#visit" className="hover:text-[var(--color-bone)] transition">Visit</a></li>
           </ul>
-          <a href="#top" className="text-center text-[var(--color-bone)]">
+          <a
+            href="#top"
+            className="absolute left-1/2 -translate-x-1/2 text-center text-[var(--color-bone)] md:static md:translate-x-0 md:justify-self-center"
+          >
             <span className="font-display text-2xl md:text-3xl tracking-[0.12em] block leading-none">RAFIKIS</span>
             <span className="font-heading text-[9px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mt-1 block">Dubai</span>
           </a>
-          <div className="flex justify-end">
+          <div className="ml-auto flex justify-end md:ml-0 md:justify-self-end">
             <a href="https://instagram.com/rafikisdubai" target="_blank" rel="noopener noreferrer" className="font-heading text-[11px] tracking-[0.25em] uppercase text-[var(--color-bone)]/80 hover:text-[var(--color-bone)] transition">@Rafikisdubai</a>
           </div>
         </nav>
@@ -177,7 +180,7 @@ function Index() {
           </div>
 
           <p className="text-center font-heading text-[10px] tracking-[0.4em] uppercase text-[var(--color-bone)]/40 mt-20">
-            Prices in AED · Everything is fire grilled
+            Prices in AED
           </p>
         </div>
       </section>
