@@ -25,9 +25,9 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex items-end overflow-hidden bg-[var(--color-ink)]">
+      <section id="top" className="relative mt-20 min-h-[calc(100dvh-5rem)] flex items-center justify-center md:mt-0 md:min-h-screen md:items-end md:justify-start overflow-hidden bg-[var(--color-ink)]">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/40 via-transparent to-[var(--color-ink)]" />
-        <div className="relative z-10 w-full text-center px-6 pb-24 md:pb-32">
+        <div className="relative z-10 w-full text-center px-6 md:pb-32">
           <h1 className="font-display text-[20vw] md:text-[14rem] leading-[0.85] tracking-[0.04em] text-[var(--color-bone)]">RAFIKIS</h1>
           <p className="font-heading text-[10px] md:text-xs tracking-[0.5em] uppercase mt-4 text-[var(--color-bone)]/80">Dubai's East African Grill House</p>
         </div>
@@ -54,14 +54,13 @@ function Index() {
               That food is the connective tissue of our community. Rafikis brings it home to the region where it was born.
             </p>
           </div>
-          
         </div>
       </section>
 
       {/* COMING SOON */}
-      <section id="coming" className="relative py-32 md:py-48 px-6 md:px-10 border-t border-[var(--color-bone)]/10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-ember)]/10 via-transparent to-transparent" />
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+      <section id="coming" className="relative pt-32 md:pt-48 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)] via-[var(--color-ember)]/30 via-[var(--color-ember)]/50 via-[var(--color-ember)]/70 to-black" />
+        <div className="relative z-10 max-w-5xl mx-auto text-center px-6 md:px-10">
           <p className="font-heading text-[10px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mb-8">Opening Soon</p>
           <h2 className="font-display text-6xl md:text-9xl lg:text-[10rem] leading-[0.9] tracking-[0.04em] text-[var(--color-bone)] mb-10">
             SEPTEMBER 2026
@@ -70,17 +69,16 @@ function Index() {
             Coming to Alserkal Avenue · Al Qouz, Dubai, UAE
           </p>
         </div>
-      </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-[var(--color-bone)]/10 py-10 px-6 md:px-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <Wordmark className="text-xl text-[var(--color-bone)]" />
-          <p className="font-heading text-[10px] tracking-[0.3em] uppercase text-[var(--color-bone)]/50">
-            © {new Date().getFullYear()} Rafikis Dubai
-          </p>
-        </div>
-      </footer>
+        <footer className="relative z-10 border-t border-[var(--color-bone)]/10 mt-32 md:mt-48">
+          <div className="max-w-7xl mx-auto py-10 px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <Wordmark className="text-xl text-[var(--color-bone)]" />
+            <p className="font-heading text-[10px] tracking-[0.3em] uppercase text-[var(--color-bone)]/50">
+              © {new Date().getFullYear()} Rafikis Dubai
+            </p>
+          </div>
+        </footer>
+      </section>
     </div>
   );
 }
