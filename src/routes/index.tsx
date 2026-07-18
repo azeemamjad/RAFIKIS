@@ -41,7 +41,7 @@ function Index() {
           </div>
 
           <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-24 text-center">
-            <p className="mb-10 animate-fade-up text-[11px] tracking-[0.5em] text-cream/70 uppercase [animation-delay:80ms]">
+            <p className="mb-5 animate-fade-up text-[11px] tracking-[0.5em] text-cream/70 uppercase [animation-delay:80ms]">
               East African Grill
             </p>
             <h1 className="font-brand animate-fade-up text-[18vw] leading-[0.85] text-cream sm:text-[14vw] md:text-[10rem] lg:text-[12rem] [animation-delay:160ms]">
