@@ -1,84 +1,146 @@
 import { createFileRoute } from "@tanstack/react-router";
+import grillImg from "../assets/grill.jpg";
+import elephantImg from "../assets/elephant.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-
-
-function Wordmark({ className = "" }: { className?: string }) {
-  return (
-    <span className={`font-display tracking-[0.08em] ${className}`}>RAFIKIS</span>
-  );
-}
-
 function Index() {
   return (
-    <div className="min-h-screen bg-[var(--color-ink)] text-[var(--color-bone)] font-body">
-      {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-[var(--color-ink)]/95 backdrop-blur-md border-b border-[var(--color-bone)]/10">
-        <nav className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-center">
-          <a href="#top" className="text-center text-[var(--color-bone)]">
-            <span className="font-display text-2xl md:text-3xl tracking-[0.12em] block leading-none">RAFIKIS</span>
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="fixed inset-x-0 top-0 z-50 bg-[#111111]">
+        <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 md:h-20 md:px-10">
+          <span className="hidden justify-self-start text-[10px] tracking-[0.35em] text-cream/60 uppercase sm:block">
+            @rafikisdubai
+          </span>
+          <a
+            href="#top"
+            className="font-brand justify-self-center pt-1 text-2xl leading-none text-cream md:text-3xl"
+          >
+            RAFIKIS
           </a>
-        </nav>
+          <span className="hidden justify-self-end text-[10px] tracking-[0.35em] text-cream/60 uppercase sm:block">
+            Dubai · 2026
+          </span>
+        </div>
       </header>
 
-      {/* HERO */}
-      <section id="top" className="relative mt-20 min-h-[calc(100dvh-5rem)] flex items-center justify-center md:mt-0 md:min-h-screen md:items-end md:justify-start overflow-hidden bg-[var(--color-ink)]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/40 via-transparent to-[var(--color-ink)]" />
-        <div className="relative z-10 w-full text-center px-6 md:pb-32">
-          <h1 className="font-display text-[20vw] md:text-[14rem] leading-[0.85] tracking-[0.04em] text-[var(--color-bone)]">RAFIKIS</h1>
-          <p className="font-heading text-[10px] md:text-xs tracking-[0.5em] uppercase mt-4 text-[var(--color-bone)]/80">Dubai's East African Grill House</p>
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section id="story" className="py-28 md:py-40 px-6 md:px-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-heading text-[10px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mb-6">Our Story</p>
-          <h2 className="font-display text-5xl md:text-7xl leading-none tracking-[0.04em] text-[var(--color-bone)] mb-10">
-            FRIENDS, BY THE FIRE.
-          </h2>
-          <div className="space-y-5 text-[var(--color-bone)]/75 leading-[1.8] text-[15px] mb-16">
-            <p>
-              Rafikis, Swahili for "friends," is born from a journey that begins in East Africa. For generations, a Muslim community made its home along the coast of Tanzania, Kenya, and Uganda, building a culinary tradition that fused Indian spice, Arab trade routes, Portuguese influence, and African soul.
-            </p>
-            <p>
-              In the 1970s, that community was uprooted, with families resettling across the world, carrying their recipes with them.
-            </p>
-            <p>
-              Our family was one of those. Growing up in the diaspora, our weekly ritual was a trip to the tiny community restaurant, mishkaki off the skewer, chooza chicken with pili pili, jungle ribs, samosas hot from the fryer.
-            </p>
-            <p className="text-[var(--color-bone)] italic">
-              That food is the connective tissue of our community. Rafikis brings it home to the region where it was born.
-            </p>
+      <main className="pt-16 md:pt-20">
+        <section
+          id="top"
+          className="relative min-h-[calc(100vh-5rem)] w-full overflow-hidden"
+        >
+          <div className="absolute inset-0">
+            <img
+              src={grillImg}
+              alt="Charcoal grill with East African mishkaki skewers and smoke"
+              className="h-full w-full object-cover animate-hero-zoom"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/70 via-[#111]/50 to-[#111]" />
           </div>
-        </div>
-      </section>
 
-      {/* COMING SOON */}
-      <section id="coming" className="relative pt-32 md:pt-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)] via-[var(--color-ember)]/30 via-[var(--color-ember)]/50 via-[var(--color-ember)]/70 to-black" />
-        <div className="relative z-10 max-w-5xl mx-auto text-center px-6 md:px-10">
-          <p className="font-heading text-[10px] tracking-[0.4em] uppercase text-[var(--color-bone)]/60 mb-8">Opening Soon</p>
-          <h2 className="font-display text-6xl md:text-9xl lg:text-[10rem] leading-[0.9] tracking-[0.04em] text-[var(--color-bone)] mb-10">
-            SEPTEMBER 2026
-          </h2>
-          <p className="font-heading text-sm md:text-base tracking-[0.25em] uppercase text-[var(--color-bone)]/80">
-            Coming to Alserkal Avenue · Al Qouz, Dubai, UAE
-          </p>
-        </div>
-
-        <footer className="relative z-10 border-t border-[var(--color-bone)]/10 mt-32 md:mt-48">
-          <div className="max-w-7xl mx-auto py-10 px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <Wordmark className="text-xl text-[var(--color-bone)]" />
-            <p className="font-heading text-[10px] tracking-[0.3em] uppercase text-[var(--color-bone)]/50">
-              © {new Date().getFullYear()} Rafikis Dubai
+          <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-24 text-center">
+            <p className="mb-10 animate-fade-up text-[11px] tracking-[0.5em] text-cream/70 uppercase [animation-delay:80ms]">
+              East African Grill
             </p>
+            <h1 className="font-brand animate-fade-up text-[18vw] leading-[0.85] text-cream sm:text-[14vw] md:text-[10rem] lg:text-[12rem] [animation-delay:160ms]">
+              RAFIKIS
+            </h1>
+            <div className="mt-12 h-px w-20 origin-center animate-line-grow bg-ember [animation-delay:320ms]" />
+            <p className="font-serif-italic mt-10 max-w-2xl animate-fade-up px-4 text-xl leading-relaxed text-cream/90 md:text-2xl [animation-delay:400ms]">
+              Born from family recipes carried across continents. Hand-marinated.
+              Charcoal-grilled. The food that brought our community together.
+            </p>
+            <div className="mt-24 flex animate-fade-up flex-col items-center gap-6 [animation-delay:520ms]">
+              <span className="text-sm font-medium tracking-[0.6em] text-ember uppercase md:text-base">
+                Opening
+              </span>
+              <p className="text-3xl font-light tracking-[0.28em] text-cream uppercase md:text-5xl lg:text-6xl">
+                September 2026
+              </p>
+              <p className="text-sm font-normal tracking-[0.55em] text-cream/80 uppercase md:text-base">
+                Dubai
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative">
+          <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-2">
+            <div className="order-2 flex flex-col justify-center px-6 py-20 sm:px-10 md:px-16 lg:order-1 lg:px-24 lg:py-32">
+              <p className="mb-8 text-[10px] font-medium tracking-[0.5em] text-ember uppercase">
+                Our Story
+              </p>
+              <h2 className="text-4xl leading-[1] font-light tracking-[0.02em] text-cream uppercase md:text-5xl lg:text-6xl">
+                Friends,
+                <br />
+                by the fire.
+              </h2>
+              <div className="mt-14 max-w-xl space-y-7 text-[15px] leading-[1.8] text-cream/75">
+                <p className="font-serif-italic text-2xl text-cream">
+                  Rafikis: Swahili for &ldquo;friends.&rdquo;
+                </p>
+                <p>
+                  For generations, a community made its home along the East African
+                  coast, Tanzania, Kenya, Uganda, building a culinary tradition where
+                  Indian spice met Arab grilling, Portuguese influence met African
+                  soul.
+                </p>
+                <p>
+                  In the 1970s, that community was uprooted. Families resettled across
+                  the world. The recipes came with them.
+                </p>
+                <p>
+                  Growing up in the diaspora, the weekly ritual was the tiny community
+                  restaurant. Mishkaki off the skewer. Chooza chicken with pili pili.
+                  Jungle ribs. Samosas hot from the fryer. That food is the connective
+                  tissue of the community.
+                </p>
+                <p className="font-serif-italic pt-3 text-lg text-cream">
+                  Rafikis brings it home, to the greatest city that welcomed us, and a
+                  region where this food has always belonged.
+                </p>
+              </div>
+            </div>
+            <div className="relative order-1 min-h-[55vh] lg:order-2 lg:min-h-[100vh]">
+              <img
+                src={elephantImg}
+                alt="Elephant grazing in East African savanna at midday"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#111]/40" />
+            </div>
+          </div>
+        </section>
+
+        <footer className="border-t border-white/5">
+          <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-10">
+            <div className="flex flex-col items-center gap-8 text-center">
+              <div className="font-brand pt-1 text-4xl leading-none text-cream">
+                RAFIKIS
+              </div>
+              <div className="h-px w-16 bg-ember" />
+              <div className="space-y-3">
+                <p className="text-[11px] tracking-[0.5em] text-cream/70 uppercase">
+                  Opening September 2026
+                </p>
+                <p className="text-[11px] tracking-[0.5em] text-cream/50 uppercase">
+                  Dubai
+                </p>
+              </div>
+              <div className="mt-6 flex gap-8 text-[10px] tracking-[0.4em] text-cream/60 uppercase">
+                <a href="#" className="transition-colors hover:text-ember">
+                  @rafikisdubai
+                </a>
+              </div>
+              <p className="mt-10 text-[9px] tracking-[0.3em] text-cream/30 uppercase">
+                © 2026 RAFIKIS
+              </p>
+            </div>
           </div>
         </footer>
-      </section>
+      </main>
     </div>
   );
 }

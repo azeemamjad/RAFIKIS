@@ -2,13 +2,90 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Rafikis";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/RAFIKIS-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/CormorantGaramond-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/fonts/CormorantGaramond-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/CormorantGaramond-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./assets/fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
 @theme {
-  --font-display: "Bebas Neue", sans-serif;
+  --font-brand: "Rafikis", "Montserrat", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Rafikis", "Montserrat", sans-serif;
   --font-heading: "Montserrat", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --color-ink: #0d0a08;
-  --color-bone: #e8dcc4;
-  --color-ember: #d94e2a;
+  --font-body: "Montserrat", sans-serif;
+  --color-cream: oklch(82% 0.06 65);
+  --color-ember: oklch(48% 0.14 45);
+  --color-ink: oklch(19% 0 0);
+  --color-bone: oklch(82% 0.06 65);
+  --color-copper: oklch(72% 0.08 65);
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -72,8 +149,10 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(19% 0 0);
+  --foreground: oklch(82% 0.06 65);
+  --cream: oklch(82% 0.06 65);
+  --ember: oklch(48% 0.14 45);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -147,10 +226,74 @@
   }
 
   body {
-    background-color: var(--color-ink);
-    color: var(--color-bone);
-    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .font-brand {
+    font-family: var(--font-brand);
+    letter-spacing: 0.01em;
+  }
+
+  .font-serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-line-grow {
+  animation: line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-hero-zoom {
+  animation: hero-zoom 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-line-grow,
+  .animate-hero-zoom {
+    animation: none;
   }
 }

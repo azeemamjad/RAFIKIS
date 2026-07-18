@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378 100" fill="#dfaa7d">
+  <path fill-rule="evenodd" d="M0,0 H36 Q52,0 52,22.5 Q52,40 40,44.5 L56,100 H41.5 L27,46.5 H13.5 V100 H0 Z M13.5,12.5 H34 Q39,12.5 39,22.5 Q39,32.5 34,32.5 H13.5 Z"/>
+  <path transform="translate(65)" d="M27.3,0 H32.7 L60,100 H46 L30,26 L14,100 H0 Z"/>
+  <path transform="translate(140)" d="M0,0 H39 V12.5 H13.5 V44 H36 V56.5 H13.5 V100 H0 Z"/>
+  <path transform="translate(194)" d="M0,0 H13.5 V100 H0 Z"/>
+  <path transform="translate(222.5)" d="M0,0 H13.5 V45 L43,0 H57 L25.5,52 L57,100 H43 L13.5,56 V100 H0 Z"/>
+  <path transform="translate(294.5)" d="M0,0 H13.5 V100 H0 Z"/>
+  <path transform="translate(323)" d="M23,0 H52.5 V13 H25.5 Q13,13 13,26 Q13,36.5 23,40.5 L34.5,45 Q55,51.5 55,72.5 Q55,100 28.5,100 H2.5 V87 H26.5 Q41.5,87 41.5,74 Q41.5,61.5 31.5,57.5 L20,53 Q0,45 0,25.5 Q0,0 23,0 Z"/>
+</svg>
