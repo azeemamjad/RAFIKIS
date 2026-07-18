@@ -68,8 +68,8 @@ function Index() {
 
         <section className="relative">
           <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-2">
-            <div className="order-2 flex flex-col justify-center px-6 py-20 sm:px-10 md:px-16 lg:order-1 lg:px-24 lg:py-32">
-              <p className="mb-8 text-[10px] font-medium tracking-[0.5em] text-ember uppercase">
+            <div className="order-2 flex flex-col justify-center px-6 py-20 text-center sm:px-10 md:px-16 lg:order-1 lg:px-24 lg:py-32 lg:text-left">
+              <p className="mb-8 text-xs font-medium tracking-[0.5em] text-ember uppercase">
                 Our Story
               </p>
               <h2 className="text-4xl leading-[1] font-light tracking-[0.02em] text-cream uppercase md:text-5xl lg:text-6xl">
@@ -77,7 +77,7 @@ function Index() {
                 <br />
                 by the fire.
               </h2>
-              <div className="mt-14 max-w-xl space-y-7 text-[15px] leading-[1.8] text-cream/75">
+              <div className="mx-auto mt-14 max-w-xl space-y-7 text-[15px] leading-[1.8] text-cream/75 lg:mx-0">
                 <p className="font-serif-italic text-2xl text-cream">
                   Rafikis: Swahili for &ldquo;friends.&rdquo;
                 </p>
