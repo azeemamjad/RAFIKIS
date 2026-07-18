@@ -73,15 +73,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "RAFIKIS Dubai | East African Grill" },
-      { name: "description", content: "Rafikis: East African grilled dishes from Tanzania, Kenya and Uganda. Mishkaki, chooza chicken, pili pili, samosas. Bold flavors, real fire." },
+      {
+        name: "description",
+        content: "RAFIKIS Dubai East African grill opening September 2026",
+      },
       { property: "og:title", content: "RAFIKIS Dubai | East African Grill" },
-      { property: "og:description", content: "Rafikis: East African grilled dishes from Tanzania, Kenya and Uganda. Mishkaki, chooza chicken, pili pili, samosas. Bold flavors, real fire." },
+      {
+        property: "og:description",
+        content: "RAFIKIS Dubai East African grill opening September 2026",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.rafikis.ae/" },
+      {
+        property: "og:image",
+        content: "https://www.rafikis.ae/og.jpg",
+      },
+      { property: "og:image:width", content: "1920" },
+      { property: "og:image:height", content: "1280" },
+      { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "RAFIKIS Dubai | East African Grill" },
-      { name: "twitter:description", content: "Rafikis: East African grilled dishes from Tanzania, Kenya and Uganda. Mishkaki, chooza chicken, pili pili, samosas. Bold flavors, real fire." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b1c2beb4-98b6-41fa-9faf-54f442fefda1/id-preview-078dcafe--b64100d7-0807-4fa5-a801-50b6e8bf04e1.lovable.app-1779355983604.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b1c2beb4-98b6-41fa-9faf-54f442fefda1/id-preview-078dcafe--b64100d7-0807-4fa5-a801-50b6e8bf04e1.lovable.app-1779355983604.png" },
+      {
+        name: "twitter:description",
+        content: "RAFIKIS Dubai East African grill opening September 2026",
+      },
+      { name: "twitter:image", content: "https://www.rafikis.ae/og.jpg" },
     ],
     links: [
       {
