@@ -10,18 +10,23 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="fixed inset-x-0 top-0 z-50 bg-[#111111]">
-        <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 md:h-20 md:px-10">
-          <span className="hidden justify-self-start text-[10px] tracking-[0.35em] text-cream/60 uppercase sm:block">
+        <div className="relative mx-auto flex h-16 max-w-[1600px] items-center justify-center px-6 md:h-20 md:px-10">
+          <a
+            href="https://instagram.com/rafikisdubai"
+            target="_blank"
+            rel="noreferrer"
+            className="absolute left-6 hidden text-[10px] tracking-[0.35em] text-cream/60 uppercase transition-colors hover:text-ember sm:block md:left-10"
+          >
             @rafikisdubai
-          </span>
+          </a>
           <a
             href="#top"
-            className="font-brand justify-self-center pt-1 text-2xl leading-none text-cream md:text-3xl"
+            className="font-brand pt-1 text-2xl leading-none text-cream md:text-3xl"
           >
             RAFIKIS
           </a>
-          <span className="hidden justify-self-end text-[10px] tracking-[0.35em] text-cream/60 uppercase sm:block">
-            Dubai · 2026
+          <span className="absolute right-6 hidden text-[10px] tracking-[0.35em] text-cream/60 uppercase sm:block md:right-10">
+            Dubai · September 2026
           </span>
         </div>
       </header>
@@ -37,7 +42,7 @@ function Index() {
               alt="Charcoal grill with East African mishkaki skewers and smoke"
               className="h-full w-full object-cover animate-hero-zoom"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/70 via-[#111]/50 to-[#111]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/85 via-[#111]/75 to-[#111]" />
           </div>
 
           <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-24 text-center">
@@ -47,8 +52,7 @@ function Index() {
             <h1 className="font-brand animate-fade-up text-[18vw] leading-[0.85] text-cream sm:text-[14vw] md:text-[10rem] lg:text-[12rem] [animation-delay:160ms]">
               RAFIKIS
             </h1>
-            <div className="mt-12 h-px w-20 origin-center animate-line-grow bg-ember [animation-delay:320ms]" />
-            <p className="font-serif-italic mt-10 max-w-2xl animate-fade-up px-4 text-xl leading-relaxed text-cream/90 md:text-2xl [animation-delay:400ms]">
+            <p className="font-serif-italic mt-10 max-w-2xl animate-fade-up px-4 text-xl leading-relaxed text-cream/90 md:text-2xl [animation-delay:320ms]">
               Born from family recipes carried across continents. Hand-marinated.
               Charcoal-grilled. The food that brought our community together.
             </p>
@@ -120,7 +124,6 @@ function Index() {
               <div className="font-brand pt-1 text-4xl leading-none text-cream">
                 RAFIKIS
               </div>
-              <div className="h-px w-16 bg-ember" />
               <div className="space-y-3">
                 <p className="text-[11px] tracking-[0.5em] text-cream/70 uppercase">
                   Opening September 2026
