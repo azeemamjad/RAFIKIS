@@ -42,7 +42,7 @@ function Index() {
               alt="Charcoal grill with East African mishkaki skewers and smoke"
               className="h-full w-full object-cover animate-hero-zoom"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/85 via-[#111]/75 to-[#111]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/60 via-[#111]/40 to-[#111]" />
           </div>
 
           <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-24 text-center">
@@ -113,6 +113,7 @@ function Index() {
                 alt="Elephant grazing in East African savanna at midday"
                 className="absolute inset-0 h-full w-full object-cover"
               />
+              <div className="absolute inset-0 bg-[#111]/25" />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#111]/40" />
             </div>
           </div>
