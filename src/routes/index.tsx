@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import grillImg from "../assets/grill.jpg";
+import smokeImg from "../assets/smoke.webp";
 import elephantImg from "../assets/elephant.jpg";
 
 export const Route = createFileRoute("/")({
@@ -34,25 +34,26 @@ function Index() {
       <main className="pt-16 md:pt-20">
         <section
           id="top"
-          className="relative min-h-[calc(100vh-5rem)] w-full overflow-hidden"
+          className="relative min-h-[calc(100vh-5rem)] w-full overflow-hidden bg-[#111111]"
         >
-          <div className="absolute inset-0">
+          <div className="pointer-events-none absolute inset-0">
             <img
-              src={grillImg}
-              alt="Charcoal grill with East African mishkaki skewers and smoke"
-              className="h-full w-full object-cover brightness-[0.9]"
+              src={smokeImg}
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-cover object-[42%_center] opacity-[0.35]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-[#111]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#111]/40 via-transparent to-[#111]" />
           </div>
 
-          <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-24 text-center">
+          <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-8 py-24 text-center sm:px-10">
             <p className="mb-5 animate-fade-up text-[11px] tracking-[0.5em] text-cream/70 uppercase [animation-delay:80ms]">
               East African Grill
             </p>
             <h1 className="font-brand animate-fade-up text-[18vw] leading-[0.85] text-cream sm:text-[14vw] md:text-[10rem] lg:text-[12rem] [animation-delay:160ms]">
               RAFIKIS
             </h1>
-            <p className="font-serif-italic mt-10 max-w-2xl animate-fade-up px-4 text-xl leading-relaxed text-cream/90 md:text-2xl [animation-delay:320ms]">
+            <p className="font-serif-italic mt-10 max-w-[19.5rem] animate-fade-up text-lg leading-relaxed text-cream/90 sm:max-w-xl sm:text-xl md:max-w-2xl md:text-2xl [animation-delay:320ms]">
               Born from family recipes carried across continents. Hand-marinated.
               Charcoal-grilled. The food that brought our community together.
             </p>
@@ -60,7 +61,7 @@ function Index() {
               <span className="text-sm font-medium tracking-[0.6em] text-ember uppercase md:text-base">
                 Opening
               </span>
-              <p className="text-3xl font-light tracking-[0.28em] text-cream uppercase md:text-5xl lg:text-6xl">
+              <p className="text-2xl font-light tracking-[0.22em] text-cream uppercase sm:text-3xl sm:tracking-[0.26em] md:text-5xl md:tracking-[0.28em] lg:text-6xl">
                 September 2026
               </p>
               <p className="text-sm font-normal tracking-[0.55em] text-cream/80 uppercase md:text-base">
@@ -72,7 +73,7 @@ function Index() {
 
         <section className="relative">
           <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-2">
-            <div className="order-2 flex flex-col justify-center px-6 py-20 text-center sm:px-10 md:px-16 lg:order-1 lg:px-24 lg:py-32 lg:text-left">
+            <div className="order-2 flex flex-col justify-center px-10 py-20 text-center sm:px-12 md:px-16 lg:order-1 lg:px-24 lg:py-32 lg:text-left">
               <p className="mb-8 text-xs font-medium tracking-[0.5em] text-ember uppercase">
                 Our Story
               </p>
