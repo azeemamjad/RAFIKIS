@@ -9,7 +9,10 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "brand:serve": "node scripts/serve-templates.mjs",
+    "brand:render": "node scripts/render-brand-assets.mjs",
+    "brand:lockups": "python scripts/make-lockup-svgs.py"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
