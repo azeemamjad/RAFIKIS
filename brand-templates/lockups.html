@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rafikis — logo lockups</title>
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./brand.css" />
+    <style>
+      /* Exact pixel sizes so exports are predictable. Wordmark cap height for
+         the custom face is 0.599em, so 100px type = 60px caps. */
+      #lockup-primary {
+        width: 900px;
+        height: 460px;
+        padding: 100px;
+      }
+      #lockup-primary .wordmark {
+        font-size: 160px;
+      }
+      #lockup-primary .descriptor {
+        font-size: 22px;
+        letter-spacing: 0.44em;
+        margin-top: 38px;
+        padding-left: 0.44em;
+      }
+
+      #lockup-stacked-sand {
+        width: 900px;
+        height: 460px;
+        padding: 100px;
+      }
+      #lockup-stacked-sand .wordmark {
+        font-size: 160px;
+      }
+      #lockup-stacked-sand .descriptor {
+        font-size: 22px;
+        letter-spacing: 0.44em;
+        margin-top: 38px;
+        padding-left: 0.44em;
+      }
+
+      #lockup-clay {
+        width: 900px;
+        height: 460px;
+        padding: 100px;
+        background: var(--charcoal);
+      }
+      #lockup-clay .wordmark {
+        font-size: 160px;
+        color: var(--clay);
+      }
+      #lockup-clay .descriptor {
+        font-size: 22px;
+        letter-spacing: 0.44em;
+        margin-top: 38px;
+        padding-left: 0.44em;
+        color: var(--clay);
+      }
+
+      #lockup-horizontal {
+        width: 1200px;
+        height: 320px;
+        padding: 100px;
+        gap: 44px;
+      }
+      #lockup-horizontal .wordmark {
+        font-size: 110px;
+      }
+      #lockup-horizontal .vertical-rule {
+        width: 2px;
+        height: 48px;
+      }
+      #lockup-horizontal .descriptor {
+        font-size: 20px;
+        letter-spacing: 0.4em;
+        writing-mode: horizontal-tb;
+        max-width: 200px;
+        line-height: 1.6;
+      }
+
+      #wordmark-only {
+        width: 900px;
+        height: 240px;
+        padding: 40px 100px;
+      }
+      #wordmark-only .wordmark {
+        font-size: 160px;
+      }
+
+      #mark-square {
+        width: 1000px;
+        height: 1000px;
+        font-size: 132px;
+        padding-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="lockup" id="lockup-primary">
+        <span class="wordmark">RAFIKIS</span>
+        <span class="descriptor">East African Grill</span>
+      </div>
+
+      <div class="lockup on-sandstone" id="lockup-stacked-sand">
+        <span class="wordmark">RAFIKIS</span>
+        <span class="descriptor">East African Grill</span>
+      </div>
+
+      <div class="lockup" id="lockup-clay">
+        <span class="wordmark">RAFIKIS</span>
+        <span class="descriptor">East African Grill</span>
+      </div>
+
+      <div class="lockup row" id="lockup-horizontal">
+        <span class="wordmark">RAFIKIS</span>
+        <span class="vertical-rule"></span>
+        <span class="descriptor">East African<br />Grill · Dubai</span>
+      </div>
+
+      <div class="lockup" id="wordmark-only">
+        <span class="wordmark">RAFIKIS</span>
+      </div>
+    </div>
+
+    <div class="mark" id="mark-square">RAFIKIS</div>
+  </body>
+</html>

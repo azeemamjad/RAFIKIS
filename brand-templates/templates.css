@@ -1,0 +1,326 @@
+/* ---------------------------------------------------------------------------
+ * Rafikis social + web templates.
+ *
+ * Every card is a fixed-size, absolutely positioned element so screenshots are
+ * pixel-exact and repeatable. Card ids are what scripts/render-brand-assets.mjs
+ * captures.
+ * ------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--charcoal);
+  color: var(--sandstone);
+}
+
+/* Photography -------------------------------------------------------------
+ * One shared grade so photos from different shoots sit together: desaturated,
+ * darkened, with a low-opacity Clay wash for warmth. */
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) contrast(1.14) saturate(0.42) sepia(0.18);
+}
+
+.warm-wash {
+  position: absolute;
+  inset: 0;
+  background: var(--clay);
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+}
+
+.photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 17, 17, 0.97) 0%,
+    rgba(17, 17, 17, 0.9) 26%,
+    rgba(17, 17, 17, 0.55) 55%,
+    rgba(17, 17, 17, 0.28) 100%
+  );
+}
+
+.photo-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 90% at 50% 40%,
+    rgba(17, 17, 17, 0) 30%,
+    rgba(17, 17, 17, 0.55) 100%
+  );
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Lockup ------------------------------------------------------------------ */
+
+.lockup-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lockup-stack .wordmark {
+  font-family: "Rafikis", "Work Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lockup-stack .descriptor {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.rule {
+  background: var(--clay);
+}
+
+/* Type ------------------------------------------------------------------- */
+
+.eyebrow {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.dish {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.dish-note {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.detail {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.footer-line {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* --- Feed post 1080 x 1080 ---------------------------------------------- */
+
+.post .content {
+  padding: 88px;
+}
+
+.post .dish {
+  font-size: 58px;
+  letter-spacing: 0.055em;
+}
+
+.post .dish-note {
+  font-size: 30px;
+  margin-top: 26px;
+  color: rgba(206, 169, 132, 0.82);
+}
+
+.post .rule {
+  width: 76px;
+  height: 1px;
+  margin: 40px 0 36px;
+}
+
+.post .eyebrow {
+  font-size: 17px;
+  letter-spacing: 0.44em;
+}
+
+.post .lockup-stack .wordmark {
+  font-size: 44px;
+}
+
+.post .lockup-stack .descriptor {
+  font-size: 14px;
+  letter-spacing: 0.44em;
+  margin-top: 12px;
+  padding-left: 0.44em;
+  color: rgba(206, 169, 132, 0.6);
+}
+
+.post .footer-line {
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  color: rgba(206, 169, 132, 0.5);
+}
+
+/* --- Story 1080 x 1920 --------------------------------------------------- */
+
+.story .content {
+  padding: 140px 96px 190px;
+}
+
+.story .dish {
+  font-size: 78px;
+  letter-spacing: 0.05em;
+}
+
+.story .dish-note {
+  font-size: 38px;
+  margin-top: 34px;
+  color: rgba(206, 169, 132, 0.82);
+}
+
+.story .rule {
+  width: 104px;
+  height: 1px;
+  margin: 54px 0 48px;
+}
+
+.story .eyebrow {
+  font-size: 22px;
+  letter-spacing: 0.46em;
+}
+
+.story .lockup-stack .wordmark {
+  font-size: 68px;
+}
+
+.story .lockup-stack .descriptor {
+  font-size: 20px;
+  letter-spacing: 0.46em;
+  margin-top: 18px;
+  padding-left: 0.46em;
+  color: rgba(206, 169, 132, 0.6);
+}
+
+.story .footer-line {
+  font-size: 20px;
+  letter-spacing: 0.32em;
+  color: rgba(206, 169, 132, 0.5);
+}
+
+/* --- Profile / avatar 1000 x 1000 --------------------------------------- */
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar .wordmark {
+  font-family: "Rafikis", "Work Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-size: 136px;
+}
+
+.avatar .rule {
+  width: 60px;
+  height: 1px;
+  margin: 42px 0 34px;
+}
+
+.avatar .descriptor {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  padding-left: 0.5em;
+  color: rgba(206, 169, 132, 0.85);
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: 58px;
+  border: 1px solid rgba(206, 169, 132, 0.16);
+}
+
+/* --- Opening announcement ---------------------------------------------- */
+
+.announce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.announce .wordmark {
+  font-family: "Rafikis", "Work Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-size: 190px;
+}
+
+.announce .descriptor {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-top: 46px;
+  padding-left: 0.5em;
+  color: rgba(206, 169, 132, 0.7);
+}
+
+.announce .rule {
+  width: 96px;
+  height: 1px;
+  margin: 56px 0;
+}
+
+.announce .headline {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 74px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.announce .location {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  margin-top: 44px;
+  color: rgba(206, 169, 132, 0.7);
+}
+
+.announce .handle {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-top: 84px;
+  color: rgba(206, 169, 132, 0.5);
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Rafikis — East African Grill",
+  "short_name": "Rafikis",
+  "description": "Rafikis East African Grill is opening soon at Alserkal Avenue, Al Quoz, Dubai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}

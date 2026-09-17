@@ -1,0 +1,102 @@
+/* ---------------------------------------------------------------------------
+ * Rafikis brand asset templates — shared design layer.
+ *
+ * Colours and type mirrors src/styles.css so that everything exported from
+ * these templates matches the live site exactly.
+ * ------------------------------------------------------------------------- */
+
+:root {
+  --charcoal: #111111;
+  --sandstone: #cea984;
+  --clay: #9b3b0a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--charcoal);
+  color: var(--sandstone);
+  font-family: "Work Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.stage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+/* Lockup ------------------------------------------------------------------ */
+
+.lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--charcoal);
+}
+
+.lockup.on-sandstone {
+  background: var(--sandstone);
+}
+
+.lockup .wordmark {
+  font-family: "Rafikis", "Work Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: var(--sandstone);
+  white-space: nowrap;
+}
+
+.lockup.on-sandstone .wordmark {
+  color: var(--charcoal);
+}
+
+.lockup .descriptor {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--sandstone);
+  white-space: nowrap;
+}
+
+.lockup.on-sandstone .descriptor {
+  color: var(--charcoal);
+}
+
+/* Horizontal lockup ------------------------------------------------------- */
+
+.lockup.row {
+  flex-direction: row;
+  align-items: center;
+}
+
+.lockup .vertical-rule {
+  background: var(--clay);
+}
+
+.lockup.on-sandstone .vertical-rule {
+  background: var(--clay);
+}
+
+/* Mark ------------------------------------------------------------------- */
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--charcoal);
+  color: var(--sandstone);
+  font-family: "Rafikis", "Work Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
