@@ -115,21 +115,19 @@ function Header() {
           href={INSTAGRAM_URL}
           target="_blank"
           rel="noreferrer"
-          className="text-cream/70 hover:text-cream font-sans text-[10px] font-medium tracking-[0.3em] uppercase transition-colors md:text-[11px]"
+          className="text-cream/70 hover:text-ember font-sans text-[10px] font-medium tracking-[0.3em] uppercase transition-colors md:text-[11px]"
         >
           @rafikisdubai
         </a>
 
+        {/* The wordmark stands alone in the header: no descriptor underneath. */}
         <a
           href="#top"
           aria-label="Rafikis — back to top"
-          className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
+          className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center"
         >
           <span className="font-brand text-cream pt-1 text-xl leading-none md:text-2xl">
             RAFIKIS
-          </span>
-          <span className="font-sans text-cream/60 mt-1.5 pl-1 text-[8px] font-medium tracking-[0.5em] uppercase">
-            Dubai
           </span>
         </a>
 
@@ -173,23 +171,25 @@ function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-24 text-center">
+      {/* Content is anchored low rather than centred: centring left a wide
+          band of empty smoke between the location line and the story photo. */}
+      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-end px-6 py-16 text-center md:py-24">
         <p className="animate-fade-up font-sans text-[10px] font-medium tracking-[0.5em] text-cream/85 uppercase">
           East African Grill
         </p>
-        <h1 className="animate-fade-up font-brand text-cream mt-10 text-[17vw] leading-[0.9] [animation-delay:120ms] sm:text-[13vw] md:text-[9rem] lg:text-[10rem]">
+        <h1 className="animate-fade-up font-brand text-cream mt-8 text-[17vw] leading-[0.9] [animation-delay:120ms] sm:text-[13vw] md:mt-10 md:text-[9rem] lg:text-[10rem]">
           RAFIKIS
         </h1>
-        <div className="animate-line-grow brand-rule mt-10 h-px w-16 [animation-delay:300ms]" />
-        <p className="animate-fade-up font-serif-italic text-cream/90 mt-10 max-w-2xl px-4 text-xl leading-relaxed [animation-delay:420ms] md:text-2xl">
+        <div className="animate-line-grow brand-rule mt-8 h-px w-16 [animation-delay:300ms] md:mt-10" />
+        <p className="animate-fade-up font-serif-italic text-cream/90 mt-8 max-w-2xl px-4 text-xl leading-relaxed [animation-delay:420ms] md:mt-10 md:text-2xl">
           Born from family recipes carried across continents. Hand-marinated. Charcoal-grilled. The
           food that brought our community together.
         </p>
-        <div className="animate-fade-up mt-20 flex flex-col items-center gap-6 [animation-delay:600ms]">
+        <div className="animate-fade-up mt-12 flex flex-col items-center gap-4 [animation-delay:600ms] md:mt-20 md:gap-6">
           <p className="font-sans text-cream text-3xl font-light tracking-[0.28em] uppercase md:text-5xl lg:text-6xl">
             Opening soon
           </p>
-          <p className="font-sans text-cream text-sm leading-loose tracking-[0.32em] uppercase md:text-base">
+          <p className="font-sans text-cream text-[11px] leading-loose tracking-[0.18em] whitespace-nowrap uppercase sm:text-sm sm:tracking-[0.28em] md:text-base md:tracking-[0.32em]">
             {LOCATION}
           </p>
         </div>
@@ -201,9 +201,25 @@ function Hero() {
 function Story() {
   return (
     <section id="story" className="bg-ink scroll-mt-16 md:scroll-mt-20">
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-2">
-        <div className="order-2 flex flex-col justify-center px-6 py-24 sm:px-10 md:px-16 lg:order-1 lg:px-24 lg:py-36">
-          <p className="font-sans text-ember text-[10px] font-medium tracking-[0.5em] uppercase">
+      {/* A true 50/50 split at lg. The row is sized by its content, not by a
+          viewport floor: a min-height here padded both columns with dead space,
+          leaving the photo floating with an even gap above and below it. */}
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-stretch lg:gap-0">
+        <div className="relative order-1 min-h-[300px] max-h-[360px] sm:max-h-[420px] lg:order-2 lg:min-h-0 lg:max-h-none">
+          {/* The source frame is 36% empty sky above the horizon and the
+              elephant's head sits 71% down, so the crop is pulled low to lift
+              the subject into the panel. */}
+          <img
+            src={elephantImg}
+            alt="Elephant grazing in East African savanna at midday"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_55%] lg:object-[50%_60%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/40" />
+        </div>
+
+        <div className="order-2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:order-1 lg:px-16 lg:py-20 xl:px-24">
+          <p className="font-sans text-ember text-[10px] font-semibold tracking-[0.5em] uppercase">
             Our Story
           </p>
           <h2 className="font-serif-italic text-cream mt-8 text-4xl leading-[1.05] md:text-5xl lg:text-6xl">
@@ -239,16 +255,6 @@ function Story() {
             </p>
           </div>
         </div>
-
-        <div className="relative order-1 min-h-[55vh] lg:order-2 lg:min-h-[100vh]">
-          <img
-            src={elephantImg}
-            alt="Elephant grazing in East African savanna at midday"
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/40" />
-        </div>
       </div>
     </section>
   );
@@ -260,7 +266,7 @@ function Menu() {
 
   return (
     <section id="menu" className="border-cream/10 bg-ink scroll-mt-16 border-y md:scroll-mt-20">
-      <div className="mx-auto max-w-[1100px] px-6 py-24 sm:px-10 md:px-16 lg:py-32">
+      <div className="mx-auto max-w-[1100px] px-6 py-16 sm:px-10 md:px-16 lg:py-32">
         <div className="text-center">
           <h2 className="font-brand text-cream text-5xl leading-none md:text-7xl">MENU</h2>
         </div>
@@ -285,7 +291,7 @@ function Menu() {
                   className={`font-sans -mb-px border-b py-4 text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors ${
                     isActive
                       ? "border-cream text-cream"
-                      : "text-cream/60 hover:text-cream border-transparent"
+                      : "text-cream/60 hover:border-ember hover:text-ember border-transparent"
                   }`}
                 >
                   {section.title}
@@ -341,7 +347,7 @@ function Footer() {
             <p className="text-cream/85 text-[11px] font-medium tracking-[0.5em] uppercase">
               Opening soon
             </p>
-            <p className="text-cream/85 text-xs leading-loose tracking-[0.32em] uppercase md:text-[13px]">
+            <p className="text-cream/85 text-[10px] leading-loose tracking-[0.22em] whitespace-nowrap uppercase sm:text-xs sm:tracking-[0.28em] md:text-[13px] md:tracking-[0.32em]">
               {LOCATION}
             </p>
           </div>
