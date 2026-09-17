@@ -95,6 +95,7 @@ const SOCIAL = [
 const ICONS = [
   ["#icon-512", "public/icon-512.png"],
   ["#icon-180", "public/apple-touch-icon.png"],
+  ["#icon-64", "public/favicon-64.png"],
   ["#icon-32", "public/favicon-32.png"],
 ];
 

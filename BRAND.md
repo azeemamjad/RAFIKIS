@@ -274,7 +274,9 @@ Verified against the repository. Everything listed as existing is on disk now.
 | `public/brand/*.svg` | Print and design lockups, outlined so they need no font: `lockup-primary.svg` (Sandstone on Charcoal), `lockup-primary-transparent.svg`, `lockup-clay-orange.svg`, `wordmark.svg`, `wordmark-charcoal.svg`. |
 | `public/brand/*.png` | Raster lockups for decks and social: `lockup-primary.png`, `lockup-primary-on-sandstone.png`, `lockup-clay-orange.png`, `lockup-horizontal.png`, `wordmark.png` (transparent), `mark-square.png`. |
 | `public/brand/social/` | Exported social cards. Profile: `instagram-profile-1000.png`. Posts, 1080 by 1080: `post-opening-announcement-1080.jpg`, `post-chooza-chicken-1080.jpg`, `post-beef-jungle-ribs-1080.jpg`, `post-beef-mishkaki-1080.jpg`, `post-lamb-chops-1080.jpg`, `post-samosas-1080.jpg`, `post-pili-pili-fries-1080.jpg`, `post-mandazi-ice-cream-1080.jpg`. Stories, 1080 by 1920: `story-beef-mishkaki-1080x1920.jpg`, `story-our-story-1080x1920.jpg`. |
-| `public/favicon.svg`, `public/favicon-32.png`, `public/apple-touch-icon.png`, `public/icon-512.png` | The app icon set: Charcoal square with the Sandstone "R" traced from the wordmark. |
+| `public/favicon.svg`, `public/icon-512.png`, `public/apple-touch-icon.png`, `public/favicon-64.png` | The app icon set: Charcoal square with the Sandstone "R" traced from the wordmark. The "R" is the icon because the full wordmark stops resolving below 64px (see the note under this table). |
+| `public/icon-wordmark-1024.png` | The supplied icon artwork, cropped square and rescaling so the wordmark spans 80% of the frame. Reference for social avatars and anywhere the full wordmark is wanted as a square. |
+| `brand-templates/icon-sizes.html` | Side-by-side legibility sheet: the "R" mark against the wordmark at 16, 32, 48, 64 and 180px. Regenerate and re-read this before changing the icon. |
 | `public/og.jpg`, `public/og.png` | Open Graph share image, 1200 by 630, referenced by the site metadata. |
 | `public/site.webmanifest` | Web app manifest naming the icons and the Charcoal theme colour. |
 | `brand-templates/` | Editable HTML sources. HTML is the master; the exports above are never retouched by hand. `lockups.html`, `social.html`, `og.html`, `icons.html`, plus `fonts.css`, `brand.css` and `templates.css`. |
@@ -285,7 +287,8 @@ Verified against the repository. Everything listed as existing is on disk now.
 
 Notes:
 
-- To regenerate everything after editing a template: `npm run brand:serve` in one terminal, then `npm run brand:render` in another. Add `--only=social`, `--only=lockups`, `--only=og` or `--only=icons` to render one group.
+- **Why the icon is the "R" and not the wordmark.** The wordmark is six letters wide. In a square icon, scaled to a comfortable margin, it occupies about 80% of the width and therefore only 14% of the height. At a 32px favicon that is roughly 4px of ink and under 2px per letter, which reads as a smudge. The "R" is the same letterform, taken from the wordmark itself, and stays legible down to 16px. Use the wordmark as a square icon only at 180px and above, which is where `icon-wordmark-1024.png` belongs.
+- To rebuild the icon set: `python scripts/make-icons.py <path-to-supplied-artwork>`, then `python scripts/inline-favicon.py`, then `npm run brand:render -- --only=icons`. The inline step is idempotent, so re-run it whenever `favicon.svg` changes or the raster PNGs will drift from the SVG.
 - `src/styles.css` is where the palette lives for the web. It defines `--color-ink` and `--color-charcoal` as `#111111`, `--color-cream` and `--color-sandstone` as `#CEA984`, and `--color-ember` and `--color-clay` as `#9B3B0A`, which give the utilities `bg-ink`, `text-cream`, `text-ember`, `border-cream/10` and so on. These hexes must not be changed. `--radius` is `0.125rem`, effectively square corners: do not round cards or buttons.
 
 ---

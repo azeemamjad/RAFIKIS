@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rafikis — icon size comparison</title>
+    <style>
+      body { margin: 0; background: #0b0b0b; color: #cea984; padding: 32px;
+             font: 400 12px/1.5 system-ui, sans-serif; }
+      h1 { font: 600 13px/1.4 system-ui, sans-serif; letter-spacing: 0.18em;
+           text-transform: uppercase; margin: 0 0 6px; }
+      p.note { opacity: 0.55; margin: 0 0 28px; max-width: 62ch; }
+      .row { display: flex; align-items: flex-end; gap: 30px; }
+      figure { margin: 0; text-align: center; }
+      .icon { background: #111111; display: flex; align-items: center;
+              justify-content: center; }
+      .icon img { display: block; }
+      figcaption { margin-top: 10px; opacity: 0.6; font-size: 10px;
+                   letter-spacing: 0.06em; }
+    </style>
+  </head>
+  <body>
+    <h1>Favicon legibility</h1>
+    <p class="note">Left: the R monogram. Right: the wordmark, cropped square and
+    scaled up to a uniform margin. Below 64px the wordmark's six letters fall under
+    two device pixels each and stop resolving.</p>
+    <div class="row">
+      <figure><div class="icon" style="width:16px;height:16px"><img src="../public/favicon.svg" width="16" height="16" style="" /></div><figcaption>16px<br />R mark</figcaption></figure><figure><div class="icon" style="width:32px;height:32px"><img src="../public/favicon.svg" width="32" height="32" style="" /></div><figcaption>32px<br />R mark</figcaption></figure><figure><div class="icon" style="width:48px;height:48px"><img src="../public/favicon.svg" width="48" height="48" style="" /></div><figcaption>48px<br />R mark</figcaption></figure><figure><div class="icon" style="width:64px;height:64px"><img src="../public/favicon.svg" width="64" height="64" style="" /></div><figcaption>64px<br />R mark</figcaption></figure><figure><div class="icon" style="width:180px;height:180px"><img src="../public/favicon.svg" width="180" height="180" style="" /></div><figcaption>180px<br />R mark</figcaption></figure><figure><div class="icon" style="width:16px;height:16px"><img src="../public/icon-wordmark-1024.png" width="16" height="16" style="object-fit: contain; width: 80%;" /></div><figcaption>16px<br />wordmark</figcaption></figure><figure><div class="icon" style="width:32px;height:32px"><img src="../public/icon-wordmark-1024.png" width="32" height="32" style="object-fit: contain; width: 80%;" /></div><figcaption>32px<br />wordmark</figcaption></figure><figure><div class="icon" style="width:48px;height:48px"><img src="../public/icon-wordmark-1024.png" width="48" height="48" style="object-fit: contain; width: 80%;" /></div><figcaption>48px<br />wordmark</figcaption></figure><figure><div class="icon" style="width:64px;height:64px"><img src="../public/icon-wordmark-1024.png" width="64" height="64" style="object-fit: contain; width: 80%;" /></div><figcaption>64px<br />wordmark</figcaption></figure><figure><div class="icon" style="width:180px;height:180px"><img src="../public/icon-wordmark-1024.png" width="180" height="180" style="object-fit: contain; width: 80%;" /></div><figcaption>180px<br />wordmark</figcaption></figure>
+    </div>
+  </body>
+</html>
