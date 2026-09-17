@@ -82,7 +82,7 @@ const SOCIAL = [
   ["#avatar", "public/brand/social/instagram-profile-1000.png"],
   ["#announce", "public/brand/social/post-opening-announcement-1080.jpg"],
   ["#post-chooza", "public/brand/social/post-chooza-chicken-1080.jpg"],
-  ["#post-ribs", "public/brand/social/post-beef-jungle-ribs-1080.jpg"],
+  ["#post-ribs", "public/brand/social/post-beef-ribs-1080.jpg"],
   ["#post-mishkaki", "public/brand/social/post-beef-mishkaki-1080.jpg"],
   ["#post-lamb", "public/brand/social/post-lamb-chops-1080.jpg"],
   ["#post-samosas", "public/brand/social/post-samosas-1080.jpg"],
