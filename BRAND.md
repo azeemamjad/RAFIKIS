@@ -127,7 +127,7 @@ Notes for whoever implements these:
 - The serif italic set at 36px or larger counts as large text for contrast purposes, which is why Sandstone at 90% is comfortable there while the 14px dish description needs 75%.
 - Line height for body copy is 1.8. Do not tighten it to fit a layout. Cut copy instead.
 - Uppercase is a CSS transform, never typed by hand into an HTML string, so the underlying copy stays sentence case and stays greppable.
-- The website's header lockup tracks "Dubai" at 0.5em, the footer location line at 0.32em, and the tabs at 0.2em.
+- The website's footer location line tracks at 0.32em and the menu tabs at 0.2em. The header wordmark carries no descriptor, so the only tracking on it is the wordmark's own 0.1em.
 
 ### 3.5 Fonts on disk
 
@@ -161,7 +161,7 @@ At least the cap height of the "R" on all four sides. Nothing may enter that spa
 
 ### 4.6 Website header lockup
 
-The header on the website stacks RAFIKIS with the word "Dubai" beneath it (Work Sans Medium, uppercase, about 0.5em tracking, Sandstone at 60%). The descriptor EAST AFRICAN GRILL appears as the hero eyebrow instead. This is the sanctioned variation for the sticky header only. It is not licence to put "Dubai" under the wordmark anywhere else.
+The website header carries the wordmark alone on the Charcoal bar, with nothing stacked beneath it. Earlier versions set "Dubai" under the wordmark; that has been removed, and it must not come back. The descriptor EAST AFRICAN GRILL belongs to the full lockup (section 4.1) and to the hero eyebrow, not to the sticky header. This keeps the header mark identical in shape to the favicon, which is also the bare wordmark.
 
 ### 4.7 Things you may not do to the wordmark
 
