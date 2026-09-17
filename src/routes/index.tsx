@@ -203,10 +203,10 @@ function Hero() {
 function Story() {
   return (
     <section id="story" className="bg-ink scroll-mt-16 md:scroll-mt-20">
-      {/* A true 50/50 split at lg: the photo takes half the viewport and the copy
-          column scrolls through it, so neither side inherits an odd height from
-          the other. Phone stacks the photo first, capped. */}
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 lg:min-h-[max(650px,88vh)] lg:grid-cols-[1.05fr_1fr] lg:items-stretch lg:gap-0">
+      {/* A true 50/50 split at lg. The row is sized by its content, not by a
+          viewport floor: a min-height here padded both columns with dead space,
+          leaving the photo floating with an even gap above and below it. */}
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-stretch lg:gap-0">
         <div className="relative order-1 min-h-[300px] max-h-[360px] sm:max-h-[420px] lg:order-2 lg:min-h-0 lg:max-h-none">
           {/* The source frame is 36% empty sky above the horizon and the
               elephant's head sits 71% down, so the crop is pulled low to lift
@@ -220,7 +220,7 @@ function Story() {
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/40" />
         </div>
 
-        <div className="order-2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:order-1 lg:px-16 lg:py-24 xl:px-24">
+        <div className="order-2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:order-1 lg:px-16 lg:py-20 xl:px-24">
           <p className="font-sans text-ember text-[10px] font-semibold tracking-[0.5em] uppercase">
             Our Story
           </p>
