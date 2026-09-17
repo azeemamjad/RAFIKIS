@@ -171,9 +171,11 @@ function Hero() {
         />
       </div>
 
-      {/* Content is anchored low rather than centred: centring left a wide
-          band of empty smoke between the location line and the story photo. */}
-      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-end px-6 py-16 text-center md:py-24">
+      {/* Centred, not bottom-anchored. The hero is a full viewport but the
+          content is only about half that, so anchoring it low dumped the whole
+          slack above it: 276px of empty smoke below the header on a 390px
+          phone. Centring splits that slack either side. */}
+      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-10 text-center md:py-24">
         <p className="animate-fade-up font-sans text-[10px] font-medium tracking-[0.5em] text-cream/85 uppercase">
           East African Grill
         </p>
