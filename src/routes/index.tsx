@@ -32,7 +32,7 @@ const MENU: MenuSection[] = [
           "Boneless chicken in our East African twist on tikka, flame-grilled and smoky.",
       },
       {
-        name: "Beef Jungle Ribs",
+        name: "Beef Ribs",
         description:
           "Beef ribs rubbed in our East African spice blend and charred over an open flame.",
       },
