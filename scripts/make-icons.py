@@ -108,18 +108,30 @@ def build_square_wordmark(source: Path, out_name: str) -> None:
     return fraction
 
 
-def build_mark_svg() -> None:
-    """The 'R' monogram, traced from the wordmark's first letter."""
-    mark = re.search(r'\sd="([^"]+)"', wordmark_path_elements()[0]).group(1)
-    pad = 15.0
-    scale = (100.0 - 2 * pad) / 100.0
+def build_favicon_svg() -> None:
+    """The favicon: the full wordmark, centred in a square frame.
+
+    The wordmark is a 378 x 100 grid and keeps its own 5.775 ratio; it is scaled
+    to WORDMARK_WIDTH_FRACTION of the square, so the letterforms are never
+    stretched or squashed to fit. Note that at 32px this leaves each letter under
+    two device pixels: see brand-templates/icon-sizes.html and the icon note in
+    BRAND.md.
+    """
+    scale = (100.0 * WORDMARK_WIDTH_FRACTION) / 378.0
+    offset_x = (100.0 - 378.0 * scale) / 2.0
+    offset_y = (100.0 - 100.0 * scale) / 2.0
+    paths = "\n      ".join(wordmark_path_elements())
     write_svg(
         "favicon.svg",
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" '
         'width="100" height="100" role="img" aria-label="Rafikis">\n'
         f'  <rect width="100" height="100" fill="{CHARCOAL}"/>\n'
-        f'  <g fill="{SANDSTONE}" transform="translate({pad:g} {pad:g}) scale({scale:.6f})">\n'
-        f'    <path fill-rule="evenodd" d="{mark}"/>\n  </g>\n</svg>\n',
+        f'  <g fill="{SANDSTONE}" transform="translate({offset_x:.3f} {offset_y:.3f}) '
+        f'scale({scale:.6f})">\n      {paths}\n  </g>\n</svg>\n',
+    )
+    print(
+        f"  wordmark spans {WORDMARK_WIDTH_FRACTION:.0%} of the square, "
+        f"ratio {378 / 100:.3f} preserved"
     )
 
 
@@ -127,9 +139,9 @@ def build_size_sheet(fraction: float) -> None:
     """Side-by-side sheet: mark vs wordmark at real favicon sizes."""
     cells = []
     for label, src, extra in (
-        ("R mark", "../public/favicon.svg", ""),
+        ("favicon", "../public/favicon.svg", ""),
         (
-            "wordmark",
+            "supplied artwork",
             "../public/icon-wordmark-1024.png",
             f"object-fit: contain; width: {fraction:.0%};",
         ),
@@ -158,9 +170,9 @@ def build_size_sheet(fraction: float) -> None:
         "                   letter-spacing: 0.06em; }\n"
         "    </style>\n  </head>\n  <body>\n"
         "    <h1>Favicon legibility</h1>\n"
-        "    <p class=\"note\">Left: the R monogram. Right: the wordmark, cropped square and\n"
-        "    scaled up to a uniform margin. Below 64px the wordmark's six letters fall under\n"
-        "    two device pixels each and stop resolving.</p>\n"
+        "    <p class=\"note\">Left: the wordmark favicon in use. Right: the supplied artwork,\n"
+        "    cropped square and scaled up. The wordmark keeps its 5.775 ratio in both, so it\n"
+        "    is never squashed into the square.</p>\n"
         f'    <div class="row">\n      {"".join(cells)}\n    </div>\n'
         "  </body>\n</html>\n",
         encoding="utf-8",
@@ -171,7 +183,7 @@ def build_size_sheet(fraction: float) -> None:
 def main() -> None:
     source = Path(sys.argv[1]) if len(sys.argv) > 1 else None
     fraction = WORDMARK_WIDTH_FRACTION
-    build_mark_svg()
+    build_favicon_svg()
     if source and source.exists():
         fraction = build_square_wordmark(source, "icon-wordmark-1024.png")
     else:
