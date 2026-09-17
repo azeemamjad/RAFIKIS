@@ -232,7 +232,7 @@ Warm, smoky, low-key photography only. The food and the fire are the light sourc
 
 ### 7.1 Profile picture
 
-Charcoal `#111111` ground, the "R" from the wordmark in Sandstone `#CEA984`, centred, inside the clear space rule from section 4.3. Export at 1080 by 1080 and let the platform crop it. No descriptor under the R in the profile picture: it is illegible at avatar size. The live website favicon uses exactly this treatment, so match it. Do not use a food photo as the profile picture.
+Charcoal `#111111` ground with the full RAFIKIS wordmark in Sandstone `#CEA984`, centred, inside the clear space rule from section 4.3. Export at 1080 by 1080 and let the platform crop it. The "EAST AFRICAN GRILL" descriptor sits under the wordmark, tracked out; nothing else. This is the same treatment as the website favicon, so the two always match. Do not use a food photo as the profile picture. `public/brand/social/instagram-profile-1000.png` is the exported asset and `brand-templates/social.html` is its source.
 
 ### 7.2 Grid consistency
 
@@ -274,7 +274,9 @@ Verified against the repository. Everything listed as existing is on disk now.
 | `public/brand/*.svg` | Print and design lockups, outlined so they need no font: `lockup-primary.svg` (Sandstone on Charcoal), `lockup-primary-transparent.svg`, `lockup-clay-orange.svg`, `wordmark.svg`, `wordmark-charcoal.svg`. |
 | `public/brand/*.png` | Raster lockups for decks and social: `lockup-primary.png`, `lockup-primary-on-sandstone.png`, `lockup-clay-orange.png`, `lockup-horizontal.png`, `wordmark.png` (transparent), `mark-square.png`. |
 | `public/brand/social/` | Exported social cards. Profile: `instagram-profile-1000.png`. Posts, 1080 by 1080: `post-opening-announcement-1080.jpg`, `post-chooza-chicken-1080.jpg`, `post-beef-jungle-ribs-1080.jpg`, `post-beef-mishkaki-1080.jpg`, `post-lamb-chops-1080.jpg`, `post-samosas-1080.jpg`, `post-pili-pili-fries-1080.jpg`, `post-mandazi-ice-cream-1080.jpg`. Stories, 1080 by 1920: `story-beef-mishkaki-1080x1920.jpg`, `story-our-story-1080x1920.jpg`. |
-| `public/favicon.svg`, `public/favicon-32.png`, `public/apple-touch-icon.png`, `public/icon-512.png` | The app icon set: Charcoal square with the Sandstone "R" traced from the wordmark. |
+| `public/favicon.svg`, `public/icon-512.png`, `public/apple-touch-icon.png`, `public/favicon-64.png`, `public/favicon-32.png` | The app icon set: the Sandstone wordmark centred on a Charcoal square, at 76% of the frame width. See the legibility note under this table before changing it. |
+| `public/icon-wordmark-1024.png` | The supplied icon artwork, cropped square and rescaled so the wordmark spans 80% of the frame. The source of record for the square wordmark treatment. |
+| `brand-templates/icon-sizes.html` | Legibility sheet: the favicon and the 1024 artwork at 16, 32, 48, 64 and 180px. Regenerate and re-read this before changing the icon. |
 | `public/og.jpg`, `public/og.png` | Open Graph share image, 1200 by 630, referenced by the site metadata. |
 | `public/site.webmanifest` | Web app manifest naming the icons and the Charcoal theme colour. |
 | `brand-templates/` | Editable HTML sources. HTML is the master; the exports above are never retouched by hand. `lockups.html`, `social.html`, `og.html`, `icons.html`, plus `fonts.css`, `brand.css` and `templates.css`. |
@@ -285,7 +287,9 @@ Verified against the repository. Everything listed as existing is on disk now.
 
 Notes:
 
-- To regenerate everything after editing a template: `npm run brand:serve` in one terminal, then `npm run brand:render` in another. Add `--only=social`, `--only=lockups`, `--only=og` or `--only=icons` to render one group.
+- **The icon is the full wordmark, and that is a deliberate trade-off.** The wordmark is six letters wide, so in a square icon at a comfortable margin it occupies 76% of the width and only about 14% of the height. At 32px that is roughly 5px of ink and under 2px per letter, which is at the edge of what a browser tab can resolve. It was chosen over an "R" monogram anyway, for consistency with the wordmark-first identity. If legibility in small tabs ever becomes a complaint, the fix is to swap `public/favicon.svg` for the "R" from the wordmark: the same letterform, which stays clean down to 16px. Compare both in `brand-templates/icon-sizes.html` before deciding.
+- Keep the wordmark's own 5.775 ratio in any square icon. Never stretch it to fill the frame: the icon carries margin above and below by design.
+- To rebuild the icon set: `python scripts/make-icons.py <path-to-supplied-artwork>`, then `python scripts/inline-favicon.py`, then `npm run brand:render -- --only=icons`. The inline step is idempotent, so re-run it whenever `favicon.svg` changes or the raster PNGs will drift from the SVG.
 - `src/styles.css` is where the palette lives for the web. It defines `--color-ink` and `--color-charcoal` as `#111111`, `--color-cream` and `--color-sandstone` as `#CEA984`, and `--color-ember` and `--color-clay` as `#9B3B0A`, which give the utilities `bg-ink`, `text-cream`, `text-ember`, `border-cream/10` and so on. These hexes must not be changed. `--radius` is `0.125rem`, effectively square corners: do not round cards or buttons.
 
 ---
