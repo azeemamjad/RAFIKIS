@@ -173,7 +173,9 @@ function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-6 py-16 text-center md:py-24">
+      {/* Content is anchored low rather than centred: centring left a wide
+          band of empty smoke between the location line and the story photo. */}
+      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] flex-col items-center justify-end px-6 py-16 text-center md:py-24">
         <p className="animate-fade-up font-sans text-[10px] font-medium tracking-[0.5em] text-cream/85 uppercase">
           East African Grill
         </p>
@@ -201,9 +203,25 @@ function Hero() {
 function Story() {
   return (
     <section id="story" className="bg-ink scroll-mt-16 md:scroll-mt-20">
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-2">
-        <div className="order-2 flex flex-col justify-center px-6 py-16 sm:px-10 md:px-16 lg:order-1 lg:px-24 lg:py-36">
-          <p className="font-sans text-ember text-[10px] font-medium tracking-[0.5em] uppercase">
+      {/* A true 50/50 split at lg: the photo takes half the viewport and the copy
+          column scrolls through it, so neither side inherits an odd height from
+          the other. Phone stacks the photo first, capped. */}
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 lg:min-h-[max(650px,88vh)] lg:grid-cols-[1.05fr_1fr] lg:items-stretch lg:gap-0">
+        <div className="relative order-1 min-h-[300px] max-h-[360px] sm:max-h-[420px] lg:order-2 lg:min-h-0 lg:max-h-none">
+          {/* The source frame is 36% empty sky above the horizon and the
+              elephant's head sits 71% down, so the crop is pulled low to lift
+              the subject into the panel. */}
+          <img
+            src={elephantImg}
+            alt="Elephant grazing in East African savanna at midday"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_55%] lg:object-[50%_60%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/40" />
+        </div>
+
+        <div className="order-2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:order-1 lg:px-16 lg:py-24 xl:px-24">
+          <p className="font-sans text-ember text-[10px] font-semibold tracking-[0.5em] uppercase">
             Our Story
           </p>
           <h2 className="font-serif-italic text-cream mt-8 text-4xl leading-[1.05] md:text-5xl lg:text-6xl">
@@ -238,19 +256,6 @@ function Story() {
               where this food belongs.
             </p>
           </div>
-        </div>
-
-        <div className="relative order-1 min-h-[55vh] lg:order-2 lg:min-h-[100vh]">
-          {/* The source frame is 36% empty sky above the horizon and the
-              elephant's head sits 71% down, so the crop is pulled low to lift
-              the subject into the panel. */}
-          <img
-            src={elephantImg}
-            alt="Elephant grazing in East African savanna at midday"
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover object-[50%_47%] lg:object-[50%_58%]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/40" />
         </div>
       </div>
     </section>
