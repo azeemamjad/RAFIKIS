@@ -173,7 +173,10 @@
   --destructive-foreground: #cea984;
   --border: #cea98429;
   --input: #cea98433;
-  --ring: #9b3b0a;
+  /* Focus indicators are Sandstone, not Clay. Clay measures 2.72:1 against
+     Charcoal, under the 3:1 that WCAG 1.4.11 requires of a focus indicator;
+     Sandstone measures 8.66:1. Clay stays for decoration: rules and eyebrows. */
+  --ring: #cea984;
 }
 
 @layer base {

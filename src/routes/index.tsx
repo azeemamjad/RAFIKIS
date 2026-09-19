@@ -24,7 +24,7 @@ const MENU: MenuSection[] = [
   {
     id: "grills",
     title: "Grills",
-    note: "All grills served with pili pili fries, classic fries or pili pili rice.",
+    note: "All grills served with Rafikis fries, classic fries or Rafikis rice.",
     items: [
       {
         name: "Chooza Chicken",
@@ -32,7 +32,7 @@ const MENU: MenuSection[] = [
           "Boneless chicken in our East African twist on tikka, flame-grilled and smoky.",
       },
       {
-        name: "Beef Jungle Ribs",
+        name: "Rafikis Beef Ribs",
         description:
           "Beef ribs rubbed in our East African spice blend and charred over an open flame.",
       },
@@ -78,7 +78,7 @@ const MENU: MenuSection[] = [
     centerLast: true,
     items: [
       {
-        name: "Pili Pili Fries",
+        name: "Rafikis Fries",
         description: "Golden fries tossed in our house-made pili pili seasoning.",
       },
       {
@@ -86,7 +86,7 @@ const MENU: MenuSection[] = [
         description: "Crispy golden fries with a pinch of salt.",
       },
       {
-        name: "Pili Pili Rice",
+        name: "Rafikis Rice",
         description: "Spiced rice with seasonal vegetables and a gentle kick of heat.",
       },
     ],
@@ -115,7 +115,7 @@ function Header() {
           href={INSTAGRAM_URL}
           target="_blank"
           rel="noreferrer"
-          className="text-cream/70 hover:text-ember font-sans text-[10px] font-medium tracking-[0.3em] uppercase transition-colors md:text-[11px]"
+          className="text-cream/70 hover:text-cream font-sans text-[10px] font-medium tracking-[0.3em] uppercase transition-colors md:text-[11px]"
         >
           @rafikisdubai
         </a>
@@ -290,10 +290,10 @@ function Menu() {
                   aria-selected={isActive}
                   aria-controls={`menu-panel-${section.id}`}
                   onClick={() => setActiveId(section.id)}
-                  className={`font-sans -mb-px border-b py-4 text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors ${
+                  className={`font-sans -mb-px border-b py-4 text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors focus-visible:ring-cream focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:outline-none ${
                     isActive
                       ? "border-cream text-cream"
-                      : "text-cream/60 hover:border-ember hover:text-ember border-transparent"
+                      : "text-cream/60 hover:border-cream/40 hover:text-cream border-transparent"
                   }`}
                 >
                   {section.title}
@@ -358,7 +358,7 @@ function Footer() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-ember transition-colors"
+              className="hover:text-cream transition-colors"
             >
               @rafikisdubai
             </a>

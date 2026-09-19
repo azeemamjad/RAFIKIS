@@ -273,7 +273,7 @@ Verified against the repository. Everything listed as existing is on disk now.
 | --- | --- |
 | `public/brand/*.svg` | Print and design lockups, outlined so they need no font: `lockup-primary.svg` (Sandstone on Charcoal), `lockup-primary-transparent.svg`, `lockup-clay-orange.svg`, `wordmark.svg`, `wordmark-charcoal.svg`. |
 | `public/brand/*.png` | Raster lockups for decks and social: `lockup-primary.png`, `lockup-primary-on-sandstone.png`, `lockup-clay-orange.png`, `lockup-horizontal.png`, `wordmark.png` (transparent), `mark-square.png`. |
-| `public/brand/social/` | Exported social cards. Profile: `instagram-profile-1000.png`. Posts, 1080 by 1080: `post-opening-announcement-1080.jpg`, `post-chooza-chicken-1080.jpg`, `post-beef-jungle-ribs-1080.jpg`, `post-beef-mishkaki-1080.jpg`, `post-lamb-chops-1080.jpg`, `post-samosas-1080.jpg`, `post-pili-pili-fries-1080.jpg`, `post-mandazi-ice-cream-1080.jpg`. Stories, 1080 by 1920: `story-beef-mishkaki-1080x1920.jpg`, `story-our-story-1080x1920.jpg`. |
+| `public/brand/social/` | Exported social cards. Profile: `instagram-profile-1000.png`. Posts, 1080 by 1080: `post-opening-announcement-1080.jpg`, `post-chooza-chicken-1080.jpg`, `post-rafikis-beef-ribs-1080.jpg`, `post-beef-mishkaki-1080.jpg`, `post-lamb-chops-1080.jpg`, `post-samosas-1080.jpg`, `post-rafikis-fries-1080.jpg`, `post-rafikis-rice-1080.jpg`, `post-mandazi-ice-cream-1080.jpg`. Stories, 1080 by 1920: `story-beef-mishkaki-1080x1920.jpg`, `story-our-story-1080x1920.jpg`. |
 | `public/favicon.svg`, `public/icon-512.png`, `public/apple-touch-icon.png`, `public/favicon-64.png`, `public/favicon-32.png` | The app icon set: the Sandstone wordmark centred on a Charcoal square, at 76% of the frame width. See the legibility note under this table before changing it. |
 | `public/icon-wordmark-1024.png` | The supplied icon artwork, cropped square and rescaled so the wordmark spans 80% of the frame. The source of record for the square wordmark treatment. |
 | `brand-templates/icon-sizes.html` | Legibility sheet: the favicon and the 1024 artwork at 16, 32, 48, 64 and 180px. Regenerate and re-read this before changing the icon. |
@@ -298,6 +298,12 @@ Notes:
 
 Contrast was calculated with the WCAG 2.1 relative luminance formula against the Charcoal ground `#111111`.
 
+**Clay Orange is never a hover state.** Menu tabs, the header handle and the footer handle all hover by moving along the Sandstone opacity scale, not by changing hue. Clay Orange is only 2.72:1 against Charcoal and every one of those elements is small text. Removing it also fixes a real inconsistency: an orange hover never appears on a phone, because phones have no hover, so the same control looked different on the two devices.
+
+The rule that follows: **Clay Orange is for decoration and nothing else.** It carries the hairline rules, the eyebrow labels and the selected-tab underline, where it is never the only signal and never has to be read as body copy. If a request comes in to make a control orange, decline it, or raise the type size until orange clears 3:1 as large text.
+
+Menu tab states, which is the case this rule was written from: the selected tab is bright Sandstone `#CEA984` with a Sandstone underline, unselected tabs sit at 60%, and hover on a pointer device brightens them to 100% with a faint Sandstone underline. The selected state is carried by the underline and by `aria-selected`, so it never depends on colour alone, and it now reads identically on a phone and a desktop.
+
 | Pair | Ratio | Verdict |
 | --- | --- | --- |
 | Sandstone `#CEA984` on Charcoal `#111111` | 8.66:1 | Passes AA and AAA for body text |
@@ -318,7 +324,7 @@ Tint figures are computed from the same relative luminance formula and are appro
 
 Other standing requirements:
 
-- Focus rings use Clay Orange. They are visible on every interactive element, including links inside body copy, and they are never removed without a replacement of equal contrast.
+- Focus rings are Sandstone, not Clay. A focus indicator needs 3:1 under WCAG 1.4.11, and Clay measures only 2.72:1 against Charcoal while Sandstone measures 8.66:1. This was corrected: the ring token used to be Clay, which was a genuine failure, and one that the "Clay is decoration only" rule should have caught. Focus rings are visible on every interactive element, including links inside body copy, and are never removed without a replacement of equal contrast.
 - Nothing communicates meaning through colour alone. The active menu tab is marked by a Sandstone underline as well as a colour change.
 - Type is never set below 9px anywhere in the brand.
 - Every photograph carrying type is checked at the pixel level, not by eye on a bright monitor.
