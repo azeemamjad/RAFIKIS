@@ -31,7 +31,7 @@ function NotFoundComponent() {
         <div className="mt-10">
           <Link
             to="/"
-            className="font-sans border-cream/30 text-cream hover:border-ember hover:text-ember inline-flex items-center justify-center border px-6 py-3 text-[10px] font-semibold tracking-[0.3em] uppercase transition-colors"
+            className="font-sans border-cream/30 text-cream hover:border-cream hover:text-cream inline-flex items-center justify-center border px-6 py-3 text-[10px] font-semibold tracking-[0.3em] uppercase transition-colors"
           >
             Back to the fire
           </Link>
@@ -69,7 +69,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           </button>
           <a
             href="/"
-            className="font-sans border-cream/30 text-cream hover:border-ember hover:text-ember inline-flex items-center justify-center border px-6 py-3 text-[10px] font-semibold tracking-[0.3em] uppercase transition-colors"
+            className="font-sans border-cream/30 text-cream hover:border-cream hover:text-cream inline-flex items-center justify-center border px-6 py-3 text-[10px] font-semibold tracking-[0.3em] uppercase transition-colors"
           >
             Go home
           </a>
