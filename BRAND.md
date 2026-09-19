@@ -273,7 +273,7 @@ Verified against the repository. Everything listed as existing is on disk now.
 | --- | --- |
 | `public/brand/*.svg` | Print and design lockups, outlined so they need no font: `lockup-primary.svg` (Sandstone on Charcoal), `lockup-primary-transparent.svg`, `lockup-clay-orange.svg`, `wordmark.svg`, `wordmark-charcoal.svg`. |
 | `public/brand/*.png` | Raster lockups for decks and social: `lockup-primary.png`, `lockup-primary-on-sandstone.png`, `lockup-clay-orange.png`, `lockup-horizontal.png`, `wordmark.png` (transparent), `mark-square.png`. |
-| `public/brand/social/` | Exported social cards. Profile: `instagram-profile-1000.png`. Posts, 1080 by 1080: `post-opening-announcement-1080.jpg`, `post-chooza-chicken-1080.jpg`, `post-beef-ribs-1080.jpg`, `post-beef-mishkaki-1080.jpg`, `post-lamb-chops-1080.jpg`, `post-samosas-1080.jpg`, `post-pili-pili-fries-1080.jpg`, `post-mandazi-ice-cream-1080.jpg`. Stories, 1080 by 1920: `story-beef-mishkaki-1080x1920.jpg`, `story-our-story-1080x1920.jpg`. |
+| `public/brand/social/` | Exported social cards. Profile: `instagram-profile-1000.png`. Posts, 1080 by 1080: `post-opening-announcement-1080.jpg`, `post-chooza-chicken-1080.jpg`, `post-rafikis-beef-ribs-1080.jpg`, `post-beef-mishkaki-1080.jpg`, `post-lamb-chops-1080.jpg`, `post-samosas-1080.jpg`, `post-rafikis-fries-1080.jpg`, `post-rafikis-rice-1080.jpg`, `post-mandazi-ice-cream-1080.jpg`. Stories, 1080 by 1920: `story-beef-mishkaki-1080x1920.jpg`, `story-our-story-1080x1920.jpg`. |
 | `public/favicon.svg`, `public/icon-512.png`, `public/apple-touch-icon.png`, `public/favicon-64.png`, `public/favicon-32.png` | The app icon set: the Sandstone wordmark centred on a Charcoal square, at 76% of the frame width. See the legibility note under this table before changing it. |
 | `public/icon-wordmark-1024.png` | The supplied icon artwork, cropped square and rescaled so the wordmark spans 80% of the frame. The source of record for the square wordmark treatment. |
 | `brand-templates/icon-sizes.html` | Legibility sheet: the favicon and the 1024 artwork at 16, 32, 48, 64 and 180px. Regenerate and re-read this before changing the icon. |
@@ -297,6 +297,8 @@ Notes:
 ## 9. Accessibility checks
 
 Contrast was calculated with the WCAG 2.1 relative luminance formula against the Charcoal ground `#111111`.
+
+**Why the menu tabs are not orange on mobile.** Clay Orange is the hover and focus colour, and phones have no hover state, so mobile shows only the selected state: bright Sandstone `#CEA984` text with a Sandstone underline, with the other tabs at 60%. Desktop adds Clay Orange on hover, which is what makes the two look different. This is deliberate. Clay Orange on Charcoal is 2.72:1, and a menu tab is 11px, so orange text there would be below the readable threshold. If a request ever comes in to make the selected tab orange, it should be declined on those grounds, or the tab size raised until orange passes as large text. The state is also carried by the underline and by `aria-selected`, so it never depends on colour alone.
 
 | Pair | Ratio | Verdict |
 | --- | --- | --- |
