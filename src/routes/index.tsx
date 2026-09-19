@@ -24,7 +24,7 @@ const MENU: MenuSection[] = [
   {
     id: "grills",
     title: "Grills",
-    note: "All grills served with pili pili fries, classic fries or pili pili rice.",
+    note: "All grills served with Rafikis fries, classic fries or Rafikis rice.",
     items: [
       {
         name: "Chooza Chicken",
@@ -32,7 +32,7 @@ const MENU: MenuSection[] = [
           "Boneless chicken in our East African twist on tikka, flame-grilled and smoky.",
       },
       {
-        name: "Beef Ribs",
+        name: "Rafikis Beef Ribs",
         description:
           "Beef ribs rubbed in our East African spice blend and charred over an open flame.",
       },
@@ -78,7 +78,7 @@ const MENU: MenuSection[] = [
     centerLast: true,
     items: [
       {
-        name: "Pili Pili Fries",
+        name: "Rafikis Fries",
         description: "Golden fries tossed in our house-made pili pili seasoning.",
       },
       {
@@ -86,7 +86,7 @@ const MENU: MenuSection[] = [
         description: "Crispy golden fries with a pinch of salt.",
       },
       {
-        name: "Pili Pili Rice",
+        name: "Rafikis Rice",
         description: "Spiced rice with seasonal vegetables and a gentle kick of heat.",
       },
     ],
