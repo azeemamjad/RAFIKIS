@@ -298,7 +298,11 @@ Notes:
 
 Contrast was calculated with the WCAG 2.1 relative luminance formula against the Charcoal ground `#111111`.
 
-**Why the menu tabs are not orange on mobile.** Clay Orange is the hover and focus colour, and phones have no hover state, so mobile shows only the selected state: bright Sandstone `#CEA984` text with a Sandstone underline, with the other tabs at 60%. Desktop adds Clay Orange on hover, which is what makes the two look different. This is deliberate. Clay Orange on Charcoal is 2.72:1, and a menu tab is 11px, so orange text there would be below the readable threshold. If a request ever comes in to make the selected tab orange, it should be declined on those grounds, or the tab size raised until orange passes as large text. The state is also carried by the underline and by `aria-selected`, so it never depends on colour alone.
+**Clay Orange is never a hover state.** Menu tabs, the header handle and the footer handle all hover by moving along the Sandstone opacity scale, not by changing hue. Clay Orange is only 2.72:1 against Charcoal and every one of those elements is small text. Removing it also fixes a real inconsistency: an orange hover never appears on a phone, because phones have no hover, so the same control looked different on the two devices.
+
+The rule that follows: **Clay Orange is for decoration and nothing else.** It carries the hairline rules, the eyebrow labels and the selected-tab underline, where it is never the only signal and never has to be read as body copy. If a request comes in to make a control orange, decline it, or raise the type size until orange clears 3:1 as large text.
+
+Menu tab states, which is the case this rule was written from: the selected tab is bright Sandstone `#CEA984` with a Sandstone underline, unselected tabs sit at 60%, and hover on a pointer device brightens them to 100% with a faint Sandstone underline. The selected state is carried by the underline and by `aria-selected`, so it never depends on colour alone, and it now reads identically on a phone and a desktop.
 
 | Pair | Ratio | Verdict |
 | --- | --- | --- |
@@ -320,7 +324,7 @@ Tint figures are computed from the same relative luminance formula and are appro
 
 Other standing requirements:
 
-- Focus rings use Clay Orange. They are visible on every interactive element, including links inside body copy, and they are never removed without a replacement of equal contrast.
+- Focus rings are Sandstone, not Clay. A focus indicator needs 3:1 under WCAG 1.4.11, and Clay measures only 2.72:1 against Charcoal while Sandstone measures 8.66:1. This was corrected: the ring token used to be Clay, which was a genuine failure, and one that the "Clay is decoration only" rule should have caught. Focus rings are visible on every interactive element, including links inside body copy, and are never removed without a replacement of equal contrast.
 - Nothing communicates meaning through colour alone. The active menu tab is marked by a Sandstone underline as well as a colour change.
 - Type is never set below 9px anywhere in the brand.
 - Every photograph carrying type is checked at the pixel level, not by eye on a bright monitor.
