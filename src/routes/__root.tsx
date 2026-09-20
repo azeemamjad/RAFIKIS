@@ -12,7 +12,7 @@ import appCss from "../styles.css?url";
 
 const SITE_URL = "https://www.rafikis.ae";
 const OG_IMAGE = `${SITE_URL}/og.jpg`;
-const PAGE_TITLE = "Rafikis — East African Grill at Alserkal Avenue";
+const PAGE_TITLE = "Rafikis - East African Grill at Alserkal Avenue";
 const PAGE_DESCRIPTION =
   "Rafikis East African Grill is opening soon at Alserkal Avenue, Al Quoz, Dubai. Discover our grills, snacks, sides and desserts.";
 
@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Rafikis — East African Grill, Dubai" },
+      { property: "og:image:alt", content: "Rafikis - East African Grill, Dubai" },
       { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: PAGE_TITLE },

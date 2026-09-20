@@ -123,12 +123,14 @@ try {
   }
 
   if (!only || only === "og") {
+    // public/og.jpg is NOT rendered here: it is produced by scripts/make-og.py
+    // from the wordmark artwork, because the crawlers that fetch it want a flat
+    // JPEG. og.png is the template render and is regenerated here.
     console.log("Open Graph:");
     await open(client, `${base}/brand-templates/og.html`);
     const box = await measure(client, "#og-card");
     const png = await capture(client, box);
     await writeImage(client, "public/og.png", png);
-    await writeImage(client, "public/og.jpg", png, { quality: 90 });
   }
 
   if (!only || only === "icons") {

@@ -123,7 +123,7 @@ function Header() {
         {/* The wordmark stands alone in the header: no descriptor underneath. */}
         <a
           href="#top"
-          aria-label="Rafikis — back to top"
+          aria-label="Rafikis, back to top"
           className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center"
         >
           <span className="font-brand text-cream pt-1 text-xl leading-none md:text-2xl">
