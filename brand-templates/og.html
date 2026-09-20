@@ -2,84 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Rafikis — Open Graph card</title>
+    <title>Rafikis - Open Graph card</title>
     <link rel="stylesheet" href="./fonts.css" />
     <link rel="stylesheet" href="./brand.css" />
     <link rel="stylesheet" href="./templates.css" />
     <style>
+      /* Charcoal field with the wordmark centred and nothing else. Same
+         treatment as public/favicon.svg, scaled to a landscape card.
+
+         scripts/make-og.py produces the shipped public/og.jpg from the wordmark
+         artwork Azeem supplied, so that file is the source of record. This page
+         is the reference for the layout, and renders the same composition from
+         the self-hosted font. */
       #og-card {
         width: 1200px;
         height: 630px;
-      }
-      #og-card .announce-inner {
-        position: absolute;
-        inset: 0;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
       }
       #og-card .wordmark {
         font-family: "Rafikis", "Work Sans", sans-serif;
-        font-size: 132px;
+        font-size: 190px;
         letter-spacing: 0.1em;
         line-height: 1;
-      }
-      #og-card .descriptor {
-        font-family: "Work Sans", system-ui, sans-serif;
-        font-weight: 500;
-        font-size: 19px;
-        letter-spacing: 0.5em;
-        text-transform: uppercase;
-        margin-top: 30px;
-        padding-left: 0.5em;
-        color: rgba(206, 169, 132, 0.72);
-      }
-      #og-card .rule {
-        width: 72px;
-        height: 1px;
-        margin: 38px 0;
-      }
-      #og-card .headline {
-        font-family: "Work Sans", system-ui, sans-serif;
-        font-weight: 300;
-        font-size: 46px;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        line-height: 1.2;
-      }
-      #og-card .location {
-        font-family: "Work Sans", system-ui, sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        letter-spacing: 0.34em;
-        text-transform: uppercase;
-        margin-top: 30px;
-        color: rgba(206, 169, 132, 0.66);
+        color: var(--sandstone);
+        white-space: nowrap;
       }
     </style>
   </head>
   <body>
-    <section class="card announce" id="og-card">
-      <img class="photo" src="../src/assets/smoke.webp" alt="" style="opacity: 0.45" />
-      <div
-        class="warm-wash"
-        style="
-          background: radial-gradient(110% 100% at 50% 112%, #3a1c07 0%, #1d0f05 40%, #111111 78%);
-          opacity: 1;
-          mix-blend-mode: normal;
-        "
-      ></div>
-      <div class="photo-scrim" style="background: rgba(17, 17, 17, 0.4)"></div>
-      <div class="photo-vignette"></div>
-      <div class="announce-inner">
-        <span class="wordmark">RAFIKIS</span>
-        <span class="descriptor">East African Grill</span>
-        <div class="rule"></div>
-        <span class="headline">Opening Soon</span>
-        <span class="location">Alserkal Avenue &middot; Al Quoz &middot; Dubai</span>
-      </div>
+    <section class="card" id="og-card">
+      <span class="wordmark">RAFIKIS</span>
     </section>
   </body>
 </html>
