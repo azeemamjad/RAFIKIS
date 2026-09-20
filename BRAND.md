@@ -13,12 +13,15 @@ This is the operating manual for the Rafikis brand. It is the single source of t
 | Location line | Alserkal Avenue · Al Quoz · Dubai |
 | Status line | Opening soon |
 | Social handle | @rafikisdubai (`https://instagram.com/rafikisdubai`) |
+| Phone | `+971 55 350 3771` (`tel:+971553503771`) |
 | Copyright line | © 2026 RAFIKIS |
 | Palette | Clay Orange `#9B3B0A` · Sandstone `#CEA984` · Charcoal `#111111` |
 | Faces | RAFIKIS (custom, logo and headlines), Work Sans (headings and body), Cormorant Garamond (italic accents) |
 | Mode | Dark only. There is no light mode. |
 
 Use the middle dot separator in the location line, always, in that exact order. The handle is `@rafikisdubai`. The wrong URL `instagram.com/rafikidubai` has appeared in drafts; it is missing the `s` in `rafikis` and must never ship.
+
+The phone number is written `+971 55 350 3771`: country code first, spaces for grouping, never hyphens or brackets. It links to `tel:+971553503771`, digits only. Give it tighter letter spacing than the social handle it sits beside, 0.18em against the handle's 0.4em, because at the handle's tracking a phone number reads as loose digits rather than a number.
 
 ---
 
