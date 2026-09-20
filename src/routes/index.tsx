@@ -10,6 +10,9 @@ export const Route = createFileRoute("/")({
 
 const INSTAGRAM_URL = "https://instagram.com/rafikisdubai";
 const LOCATION = "Alserkal Avenue · Al Quoz · Dubai";
+const PHONE_DISPLAY = "+971 55 350 3771";
+// Same number, stripped for dialling: tel: wants digits with no spaces.
+const PHONE_HREF = "tel:+971553503771";
 
 type MenuSection = {
   id: string;
@@ -353,7 +356,10 @@ function Footer() {
               {LOCATION}
             </p>
           </div>
-          <div className="font-sans text-cream/80 mt-4 flex gap-8 text-[10px] tracking-[0.4em] uppercase">
+          {/* Both stacked, not side by side: the handle set at 0.4em tracking
+              plus the number does not fit one row on a 390px phone without
+              wrapping awkwardly. */}
+          <div className="font-sans text-cream/80 mt-4 flex flex-col items-center gap-4 text-[10px] tracking-[0.4em] uppercase sm:flex-row sm:gap-8">
             <a
               href={INSTAGRAM_URL}
               target="_blank"
@@ -361,6 +367,14 @@ function Footer() {
               className="hover:text-cream transition-colors"
             >
               @rafikisdubai
+            </a>
+            {/* The number gets tighter tracking than the handle: at 0.4em a
+                phone number reads as loose digits rather than a number. */}
+            <a
+              href={PHONE_HREF}
+              className="hover:text-cream tracking-[0.18em] transition-colors sm:tracking-[0.24em]"
+            >
+              {PHONE_DISPLAY}
             </a>
           </div>
           <p className="font-sans text-cream/45 mt-8 text-[9px] tracking-[0.3em] uppercase">
