@@ -200,17 +200,19 @@ This copy is approved and must be reproduced exactly, including "Rafikis: Swahil
 
 > **Rafikis: Swahili for "friends."**
 >
-> For generations, a community made its home along the East African coast, Tanzania, Kenya, Uganda, building a culinary tradition where Indian spice met Arab charcoal, and Portuguese chilli met Swahili Coconut.
+> For generations, a community made its home along the East African coast, Tanzania, Kenya, Uganda, building a culinary tradition where Indian spice met Arab charcoal, and Portuguese chilli met Swahili coconut.
 >
 > In the 1970s, that community lost its home. Families resettled across the world. The recipes went with them.
 >
-> Growing up in the diaspora, the weekly ritual was the tiny community restaurant. Mishkaki off the skewer. Chooza chicken with pili pili. Jungle ribs. Kababs and samosas hot from the fryer. That food is how the community held.
+> Growing up in the diaspora, the weekly ritual was the tiny community restaurant. Mishkaki off the skewer. Chooza chicken off the charcoal. Lamb chops and beef ribs. Kebabs, samosas and mogo hot from the fryer. That food is how the community held.
 >
 > Rafikis is that food. East African street food, off the grill, out of the fryer, made for sharing.
 >
 > Rafikis brings it to the greatest city in the world. A city that welcomed us, and where this food belongs.
 
 Do not edit this for length on a social card. Crop the post, not the paragraph.
+
+The dish list in the third paragraph names food rather than menu items, so it does not track menu renames word for word. It was revised to "Chooza chicken off the charcoal. Lamb chops and beef ribs. Kebabs, samosas and mogo" and no longer says "Jungle ribs", which retired with the old menu name.
 
 ---
 
