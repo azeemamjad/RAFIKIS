@@ -290,7 +290,7 @@ function Menu() {
                   aria-selected={isActive}
                   aria-controls={`menu-panel-${section.id}`}
                   onClick={() => setActiveId(section.id)}
-                  className={`font-sans -mb-px border-b py-4 text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors focus-visible:ring-cream focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:outline-none ${
+                  className={`font-sans -mb-px border-b pt-4 pb-10 text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors focus-visible:ring-cream focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:outline-none ${
                     isActive
                       ? "border-cream text-cream"
                       : "text-cream/60 hover:border-cream/40 hover:text-cream border-transparent"
