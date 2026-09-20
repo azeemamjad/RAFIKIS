@@ -236,7 +236,7 @@ function Story() {
             <p>
               For generations, a community made its home along the East African coast, Tanzania,
               Kenya, Uganda, building a culinary tradition where Indian spice met Arab charcoal, and
-              Portuguese chilli met Swahili Coconut.
+              Portuguese chilli met Swahili coconut.
             </p>
             <p>
               In the 1970s, that community lost its home. Families resettled across the world. The
@@ -244,8 +244,8 @@ function Story() {
             </p>
             <p>
               Growing up in the diaspora, the weekly ritual was the tiny community restaurant.
-              Mishkaki off the skewer. Chooza chicken with pili pili. Jungle ribs. Kababs and
-              samosas hot from the fryer. That food is how the community held.
+              Mishkaki off the skewer. Chooza chicken off the charcoal. Lamb chops and beef ribs.
+              Kebabs, samosas and mogo hot from the fryer. That food is how the community held.
             </p>
             <p>
               Rafikis is that food. East African street food, off the grill, out of the fryer, made
