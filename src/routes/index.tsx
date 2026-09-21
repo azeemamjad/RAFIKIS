@@ -104,7 +104,7 @@ const MENU: MenuSection[] = [
       },
       {
         name: "Chai Affogato",
-        description: "Warm East African fried dough filled with vanilla ice cream.",
+        description: "Hot Kenyan chai poured over vanilla ice cream.",
       },
     ],
   },
