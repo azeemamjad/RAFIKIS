@@ -30,14 +30,14 @@ const MENU: MenuSection[] = [
     note: "All grills served with Rafikis fries, classic fries or Rafikis rice.",
     items: [
       {
-        name: "Chooza Chicken",
-        description:
-          "Boneless chicken in our East African twist on tikka, flame-grilled and smoky.",
-      },
-      {
         name: "Rafikis Beef Ribs",
         description:
           "Beef ribs rubbed in our East African spice blend and charred over an open flame.",
+      },
+      {
+        name: "Chooza Chicken",
+        description:
+          "Boneless chicken in our East African twist on tikka, flame-grilled and smoky.",
       },
       {
         name: "Beef Mishkaki",
