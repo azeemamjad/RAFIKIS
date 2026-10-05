@@ -46,8 +46,7 @@ const MENU: MenuSection[] = [
       },
       {
         name: "Lamb Chops",
-        description:
-          "Marinated in garlic, ginger and Kenyan spices, then seared for a caramelised crust.",
+        description: "Marinated in East African spices, then seared for a caramelised crust.",
       },
     ],
   },
@@ -58,12 +57,12 @@ const MENU: MenuSection[] = [
       {
         name: "Beef Samosas",
         description:
-          "An East African favourite; hand-folded golden pastry filled with lightly spiced minced beef.",
+          "An East African favourite. Hand-folded golden pastry filled with lightly spiced minced beef.",
       },
       {
         name: "Mogo",
         description:
-          "Fried cassava, crispy on the outside and fluffy on the inside. Plain or with chilli and salt.",
+          "Fried cassava, crisp and golden, fluffy inside. Plain or with chilli and salt.",
       },
     ],
   },
@@ -101,13 +100,12 @@ const MENU: MenuSection[] = [
         description: "Hot Kenyan chai poured over vanilla ice cream.",
       },
       {
-        name: "Mandazi",
-        description:
-          "East African fried dough, golden on the outside and soft and fluffy on the inside.",
+        name: "Mandazi (2 pcs)",
+        description: "East African fried dough, golden outside and soft inside.",
       },
       {
         name: "Chai",
-        description: "Black tea brewed with milk, ginger and cardamom for a warm, spiced finish.",
+        description: "Kenyan chai, slow-brewed with milk and warming spices.",
       },
     ],
   },
