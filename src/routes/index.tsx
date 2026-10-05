@@ -56,11 +56,7 @@ const MENU: MenuSection[] = [
     title: "Snacks",
     items: [
       {
-        name: "Kebabs",
-        description: "East African-style spiced beef patties with fresh herbs, crisp and juicy.",
-      },
-      {
-        name: "Samosas",
+        name: "Beef Samosas",
         description:
           "An East African favourite; hand-folded golden pastry filled with lightly spiced minced beef.",
       },
@@ -69,17 +65,19 @@ const MENU: MenuSection[] = [
         description:
           "Fried cassava, crispy on the outside and fluffy on the inside. Plain or with chilli and salt.",
       },
-      {
-        name: "Snack Trio",
-        description: "Kebabs, samosas, and mogo. A bit of everything.",
-      },
     ],
   },
   {
     id: "sides",
     title: "Sides",
+    // Three dishes in a two-column grid: the last one spans both columns so the
+    // row stays centred rather than hanging under the left card.
     centerLast: true,
     items: [
+      {
+        name: "Rafikis Rice",
+        description: "Spiced rice with seasonal vegetables and a gentle kick of heat.",
+      },
       {
         name: "Rafikis Fries",
         description: "Golden fries tossed in our house-made pili pili seasoning.",
@@ -87,10 +85,6 @@ const MENU: MenuSection[] = [
       {
         name: "Regular Fries",
         description: "Crispy golden fries with a pinch of salt.",
-      },
-      {
-        name: "Rafikis Rice",
-        description: "Spiced rice with seasonal vegetables and a gentle kick of heat.",
       },
     ],
   },
@@ -105,6 +99,15 @@ const MENU: MenuSection[] = [
       {
         name: "Chai Affogato",
         description: "Hot Kenyan chai poured over vanilla ice cream.",
+      },
+      {
+        name: "Mandazi",
+        description:
+          "East African fried dough, golden on the outside and soft and fluffy on the inside.",
+      },
+      {
+        name: "Chai",
+        description: "Black tea brewed with milk, ginger and cardamom for a warm, spiced finish.",
       },
     ],
   },
