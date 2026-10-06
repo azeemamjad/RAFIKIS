@@ -27,7 +27,7 @@ const MENU: MenuSection[] = [
   {
     id: "grills",
     title: "Grills",
-    note: "All grills served with Rafikis fries, classic fries or Rafikis rice.",
+    note: "All grills served with choice of Rafikis Rice, Rafikis Fries or Regular Fries.",
     items: [
       {
         name: "Rafikis Beef Ribs",
@@ -56,8 +56,7 @@ const MENU: MenuSection[] = [
     items: [
       {
         name: "Beef Samosas",
-        description:
-          "An East African favourite. Hand-folded golden pastry filled with lightly spiced minced beef.",
+        description: "Hand-folded golden pastry filled with lightly spiced minced beef.",
       },
       {
         name: "Mogo",
