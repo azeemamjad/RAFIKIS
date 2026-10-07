@@ -190,14 +190,9 @@ function Hero() {
           Born from family recipes carried across continents. Hand-marinated. Charcoal-grilled. The
           food that brought our community together.
         </p>
-        <div className="animate-fade-up mt-12 flex flex-col items-center gap-4 [animation-delay:600ms] md:mt-20 md:gap-6">
-          <p className="font-sans text-cream text-3xl font-light tracking-[0.28em] uppercase md:text-5xl lg:text-6xl">
-            Opening soon
-          </p>
-          <p className="font-sans text-cream text-[11px] leading-loose tracking-[0.18em] whitespace-nowrap uppercase sm:text-sm sm:tracking-[0.28em] md:text-base md:tracking-[0.32em]">
-            {LOCATION}
-          </p>
-        </div>
+        <p className="animate-fade-up font-sans text-cream mt-12 text-[11px] leading-loose tracking-[0.18em] whitespace-nowrap uppercase [animation-delay:600ms] sm:text-sm sm:tracking-[0.28em] md:mt-20 md:text-base md:tracking-[0.32em]">
+          {LOCATION}
+        </p>
       </div>
     </section>
   );
@@ -348,10 +343,7 @@ function Footer() {
         <div className="flex flex-col items-center gap-8 text-center">
           <div className="font-brand text-cream pt-1 text-3xl leading-none">RAFIKIS</div>
           <div className="brand-rule h-px w-14" />
-          <div className="font-sans space-y-3">
-            <p className="text-cream/85 text-[11px] font-medium tracking-[0.5em] uppercase">
-              Opening soon
-            </p>
+          <div className="font-sans">
             <p className="text-cream/85 text-[10px] leading-loose tracking-[0.22em] whitespace-nowrap uppercase sm:text-xs sm:tracking-[0.28em] md:text-[13px] md:tracking-[0.32em]">
               {LOCATION}
             </p>
