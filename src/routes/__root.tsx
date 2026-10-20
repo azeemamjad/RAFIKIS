@@ -14,7 +14,7 @@ const SITE_URL = "https://www.rafikis.ae";
 const OG_IMAGE = `${SITE_URL}/og.jpg`;
 const PAGE_TITLE = "Rafikis - East African Grill at Alserkal Avenue";
 const PAGE_DESCRIPTION =
-  "Rafikis East African Grill is opening soon at Alserkal Avenue, Al Quoz, Dubai. Discover our grills, snacks and desserts.";
+  "Rafikis East African Grill is opening soon at Alserkal Avenue, Al Quoz, Dubai. Discover our grills, sides and desserts.";
 
 function NotFoundComponent() {
   return (

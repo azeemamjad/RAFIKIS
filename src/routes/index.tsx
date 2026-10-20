@@ -27,6 +27,7 @@ const MENU: MenuSection[] = [
   {
     id: "grills",
     title: "Grills",
+    note: "All grills served with choice of Rafikis Rice, Rafikis Fries or Regular Fries.",
     items: [
       {
         name: "Rafikis Beef Ribs",
@@ -50,17 +51,23 @@ const MENU: MenuSection[] = [
     ],
   },
   {
-    id: "snacks",
-    title: "Snacks",
+    id: "sides",
+    title: "Sides",
+    // Three dishes in a two-column grid: the last one spans both columns so the
+    // row stays centred rather than hanging under the left card.
+    centerLast: true,
     items: [
       {
-        name: "Beef Samosas",
-        description: "Hand-folded golden pastry filled with lightly spiced minced beef.",
+        name: "Rafikis Rice",
+        description: "Spiced rice with seasonal vegetables and a gentle kick of heat.",
       },
       {
-        name: "Mogo",
-        description:
-          "Fried cassava, crisp and golden, fluffy inside. Plain or with chilli and salt.",
+        name: "Rafikis Fries",
+        description: "Golden fries tossed in our house-made pili pili seasoning.",
+      },
+      {
+        name: "Regular Fries",
+        description: "Crispy golden fries with a pinch of salt.",
       },
     ],
   },
