@@ -27,7 +27,6 @@ const MENU: MenuSection[] = [
   {
     id: "grills",
     title: "Grills",
-    note: "All grills served with choice of Rafikis Rice, Rafikis Fries or Regular Fries.",
     items: [
       {
         name: "Rafikis Beef Ribs",
@@ -66,27 +65,6 @@ const MENU: MenuSection[] = [
     ],
   },
   {
-    id: "sides",
-    title: "Sides",
-    // Three dishes in a two-column grid: the last one spans both columns so the
-    // row stays centred rather than hanging under the left card.
-    centerLast: true,
-    items: [
-      {
-        name: "Rafikis Rice",
-        description: "Spiced rice with seasonal vegetables and a gentle kick of heat.",
-      },
-      {
-        name: "Rafikis Fries",
-        description: "Golden fries tossed in our house-made pili pili seasoning.",
-      },
-      {
-        name: "Regular Fries",
-        description: "Crispy golden fries with a pinch of salt.",
-      },
-    ],
-  },
-  {
     id: "desserts",
     title: "Desserts",
     items: [
@@ -95,16 +73,8 @@ const MENU: MenuSection[] = [
         description: "Warm East African fried dough filled with vanilla ice cream.",
       },
       {
-        name: "Chai Affogato",
-        description: "Hot Kenyan chai poured over vanilla ice cream.",
-      },
-      {
-        name: "Mandazi (2 pcs)",
+        name: "Mandazi",
         description: "East African fried dough, golden outside and soft inside.",
-      },
-      {
-        name: "Chai",
-        description: "Kenyan chai, slow-brewed with milk and warming spices.",
       },
     ],
   },
