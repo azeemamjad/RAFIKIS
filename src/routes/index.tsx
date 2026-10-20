@@ -51,21 +51,6 @@ const MENU: MenuSection[] = [
     ],
   },
   {
-    id: "snacks",
-    title: "Snacks",
-    items: [
-      {
-        name: "Beef Samosas",
-        description: "Hand-folded golden pastry filled with lightly spiced minced beef.",
-      },
-      {
-        name: "Mogo",
-        description:
-          "Fried cassava, crisp and golden, fluffy inside. Plain or with chilli and salt.",
-      },
-    ],
-  },
-  {
     id: "sides",
     title: "Sides",
     // Three dishes in a two-column grid: the last one spans both columns so the
@@ -95,16 +80,8 @@ const MENU: MenuSection[] = [
         description: "Warm East African fried dough filled with vanilla ice cream.",
       },
       {
-        name: "Chai Affogato",
-        description: "Hot Kenyan chai poured over vanilla ice cream.",
-      },
-      {
-        name: "Mandazi (2 pcs)",
+        name: "Mandazi",
         description: "East African fried dough, golden outside and soft inside.",
-      },
-      {
-        name: "Chai",
-        description: "Kenyan chai, slow-brewed with milk and warming spices.",
       },
     ],
   },

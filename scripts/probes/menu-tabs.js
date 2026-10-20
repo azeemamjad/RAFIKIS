@@ -37,7 +37,7 @@
 
   const out = { initial: read(), fonts, colors, afterClicks: [] };
 
-  for (const label of ["Snacks", "Sides", "Desserts", "Grills"]) {
+  for (const label of ["Sides", "Desserts", "Grills"]) {
     const tab = [...document.querySelectorAll('[role="tab"]')].find((t) => t.textContent === label);
     tab.click();
     await sleep(120);

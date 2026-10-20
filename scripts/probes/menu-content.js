@@ -21,7 +21,7 @@
 
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const out = {};
-  for (const name of ["Snacks", "Sides", "Desserts", "Grills"]) {
+  for (const name of ["Sides", "Desserts", "Grills"]) {
     const tab = tabs.find((t) => t.textContent === name);
     if (!tab) {
       out[name] = "TAB NOT FOUND";
