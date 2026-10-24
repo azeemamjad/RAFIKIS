@@ -21,15 +21,12 @@
 
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const out = {};
-  for (const name of ["Sides", "Desserts", "Grills"]) {
-    const tab = tabs.find((t) => t.textContent === name);
-    if (!tab) {
-      out[name] = "TAB NOT FOUND";
-      continue;
-    }
+  // Read the tab names from the page instead of a hardcoded list, so the probe
+  // keeps working as sections come and go.
+  for (const tab of tabs) {
     tab.click();
     await sleep(180);
-    out[name] = read();
+    out[tab.textContent] = read();
   }
   out.tabsOnOneRow = tabs.every(
     (t) => Math.abs(t.getBoundingClientRect().top - tabs[0].getBoundingClientRect().top) < 2,

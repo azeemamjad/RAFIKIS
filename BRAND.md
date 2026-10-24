@@ -209,7 +209,7 @@ This copy is approved and must be reproduced exactly, including "Rafikis: Swahil
 >
 > Growing up in the diaspora, the weekly ritual was the tiny community restaurant. Mishkaki off the skewer. Chooza chicken off the charcoal. Lamb chops and beef ribs. Kebabs, samosas and mogo hot from the fryer. That food is how the community held.
 >
-> Rafikis is that food. East African street food, off the grill, out of the fryer, made for sharing.
+> Rafikis is that food. East African street food, off the grill, made for sharing.
 >
 > Rafikis brings it to the greatest city in the world. A city that welcomed us, and where this food belongs.
 
