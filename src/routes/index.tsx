@@ -72,6 +72,20 @@ const MENU: MenuSection[] = [
     ],
   },
   {
+    id: "desserts",
+    title: "Desserts",
+    items: [
+      {
+        name: "Mandazi Ice Cream Sandwich",
+        description: "Warm East African fried dough filled with vanilla ice cream.",
+      },
+      {
+        name: "Mandazi",
+        description: "East African fried dough, golden outside and soft inside.",
+      },
+    ],
+  },
+  {
     id: "sauces",
     title: "Sauces",
     items: [
@@ -83,20 +97,6 @@ const MENU: MenuSection[] = [
         name: "Coconut Chutney",
         description:
           "A creamy, tropical condiment made with fresh grated coconut and subtle green chilies.",
-      },
-    ],
-  },
-  {
-    id: "desserts",
-    title: "Desserts",
-    items: [
-      {
-        name: "Mandazi Ice Cream Sandwich",
-        description: "Warm East African fried dough filled with vanilla ice cream.",
-      },
-      {
-        name: "Mandazi",
-        description: "East African fried dough, golden outside and soft inside.",
       },
     ],
   },
