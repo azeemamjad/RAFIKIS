@@ -7,8 +7,12 @@
   },
   "Sides": {
     "Rafikis Rice": "Spiced rice with seasonal vegetables and a gentle kick of heat.",
-    "Rafikis Fries": "Golden fries tossed in our house-made pili pili seasoning.",
+    "Rafikis Fries": "Golden fries tossed in our house-made Rafikis seasoning.",
     "Regular Fries": "Crispy golden fries with a pinch of salt."
+  },
+  "Sauces": {
+    "Ambli": "A tangy and sweet tamarind-based chutney.",
+    "Coconut Chutney": "A creamy, tropical condiment made with fresh grated coconut and subtle green chilies."
   },
   "Desserts": {
     "Mandazi Ice Cream Sandwich": "Warm East African fried dough filled with vanilla ice cream.",

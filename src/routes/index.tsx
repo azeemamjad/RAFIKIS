@@ -63,11 +63,26 @@ const MENU: MenuSection[] = [
       },
       {
         name: "Rafikis Fries",
-        description: "Golden fries tossed in our house-made pili pili seasoning.",
+        description: "Golden fries tossed in our house-made Rafikis seasoning.",
       },
       {
         name: "Regular Fries",
         description: "Crispy golden fries with a pinch of salt.",
+      },
+    ],
+  },
+  {
+    id: "sauces",
+    title: "Sauces",
+    items: [
+      {
+        name: "Ambli",
+        description: "A tangy and sweet tamarind-based chutney.",
+      },
+      {
+        name: "Coconut Chutney",
+        description:
+          "A creamy, tropical condiment made with fresh grated coconut and subtle green chilies.",
       },
     ],
   },
@@ -222,10 +237,7 @@ function Story() {
               Mishkaki off the skewer. Chooza chicken off the charcoal. Lamb chops and beef ribs.
               Kebabs, samosas and mogo hot from the fryer. That food is how the community held.
             </p>
-            <p>
-              Rafikis is that food. East African street food, off the grill, out of the fryer, made
-              for sharing.
-            </p>
+            <p>Rafikis is that food. East African street food, off the grill, made for sharing.</p>
             <p>
               Rafikis brings it to the greatest city in the world. A city that welcomed us, and
               where this food belongs.
