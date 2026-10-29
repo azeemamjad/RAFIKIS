@@ -74,6 +74,7 @@ const MENU: MenuSection[] = [
   {
     id: "desserts",
     title: "Desserts",
+    centerLast: true,
     items: [
       {
         name: "Mandazi Ice Cream Sandwich",
@@ -82,6 +83,10 @@ const MENU: MenuSection[] = [
       {
         name: "Mandazi",
         description: "East African fried dough, golden outside and soft inside.",
+      },
+      {
+        name: "Cheezy Mandazi",
+        description: "Warm East African fried dough filled with cheese.",
       },
     ],
   },
